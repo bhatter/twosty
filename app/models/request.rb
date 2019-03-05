@@ -1,6 +1,6 @@
 class Request < ApplicationRecord
   belongs_to :user
-  belongs_to :restaurant
+  belongs_to :restaurant, optional: true
   enum price: ["1", "2", "3", "4"]
   enum meal_time: [:lunch, :dinner]
   validates :meal_time, presence: true
