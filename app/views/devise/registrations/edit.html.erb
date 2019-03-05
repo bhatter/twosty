@@ -21,6 +21,13 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :date_of_birth %>
+    <%= f.input :photo  %>
+    <%= f.input :age_preference_from %>
+    <%= f.input :age_preference_to %>
+    <%= f.input :gender_preference, :as => :radio_buttons, :collection => User.gender_preferences.keys %>
   </div>
 
   <div class="form-actions">
