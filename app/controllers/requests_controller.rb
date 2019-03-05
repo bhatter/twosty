@@ -7,7 +7,7 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
     @request.user = current_user
     if @request.save
-      redirect_to edit_request_path(@request.user)
+      redirect_to edit_request_path(@request)
     else
       p @request.errors.messages
       render 'new'
@@ -16,6 +16,7 @@ class RequestsController < ApplicationController
 
   def edit
     @request = Request.find(params[:id])
+
   end
 
   private
