@@ -1,10 +1,14 @@
+<div class="container">
 
-<h1>Meeting <%= @meeting.id %></h1>
+  <h1>Congratulations <%= current_user.first_name %>!</h1>
+  <p>You'll be meeting <%= @meeting.id %> </p>
+  <p>At the restaurant</p>
 
-<div
-  id="map"
-  style="width: 30%;
-  height: 300px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+  <div
+    id="map"
+    style="width: 30%;
+    height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
