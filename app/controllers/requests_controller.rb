@@ -17,6 +17,10 @@ class RequestsController < ApplicationController
     @request = Request.find(params[:id])
   end
 
+  def index
+    @requests = Request.where(user: current_user)
+  end
+
   private
 
   def request_params
