@@ -11,6 +11,4 @@ class MeetingsController < ApplicationController
       redirect_to meeting_path(@meeting)
     end
   end
-
-
 end
