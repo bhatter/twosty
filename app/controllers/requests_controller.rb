@@ -7,22 +7,22 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
     @request.user = current_user
     if @request.save
-      redirect_to edit_request_path(@request)
+      # redirect_to root_path
     else
-      p @request.errors.messages
       render 'new'
     end
   end
 
   def edit
     @request = Request.find(params[:id])
+    matchusers
     @matching_requests = match_requests(@request)
   end
 
   private
 
   def request_params
-    params.require(:request).permit(:price, :meal_time, :location, :meeting_date)
+    params.require(:request).permit(:location, :meeting_date, :cuisine_id)
   end
 
   def match_requests(request)
