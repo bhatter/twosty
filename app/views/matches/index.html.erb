@@ -1,8 +1,10 @@
+<h1>Matches</h1>
+
 <div class="container">
   <h2> Choose your date </h2>
   <% @matching_requests.each do |match| %>
   <div>
-    <%= link_to dates_path(chooser_request_id: @request, chosen_request_id: match.id), method: :post do  %>
+    <%= link_to meetings_path(chooser_request_id: @request.id, chosen_request_id: match.id), method: :post do  %>
       <%= match.user.first_name %>
     <% end %>
       <%= match.user.age %>
