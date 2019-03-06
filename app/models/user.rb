@@ -16,4 +16,24 @@ class User < ApplicationRecord
   validates :age_preference_from, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :age_preference_to, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :photo, presence: true
+
+  def age
+    (Date.today.year - date_of_birth.year).to_i
+  end
+
+  def birth_date_preference_from
+    Date.today - age_preference_from.years
+  end
+
+  def birth_date_preference_to
+    Date.today - age_preference_to.years
+  end
+
+  def preferred_gender
+    man? ? :male : :female
+  end
+
+  def gender_to_preferred
+    male? ? :man : :woman
+  end
 end
