@@ -18,7 +18,9 @@
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
-      <%= f.input :date_of_birth %>
+      <%= f.input :date_of_birth , :as => :date, :start_year => Date.today.year - 12,
+:end_year => 1900,
+:order => [ :day, :month, :year], :required => true %>
       <%= f.input :photo  %>
       <%= f.input :age_preference_from %>
       <%= f.input :age_preference_to %>
