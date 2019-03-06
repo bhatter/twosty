@@ -24,6 +24,7 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :date_of_birth %>
+    <%= f.input :gender, :as => :radio_buttons, :collection => User.genders.keys %>
     <%= f.input :photo  %>
     <%= f.input :age_preference_from %>
     <%= f.input :age_preference_to %>
