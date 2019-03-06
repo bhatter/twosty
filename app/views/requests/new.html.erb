@@ -4,10 +4,9 @@
 
 
    <%= simple_form_for(@request) do |f| %>
-
         <%= f.input :location %>
-
         <%= f.input :meeting_date %>
+        <%= f.association :cuisine, as: :radio_buttons %>
         <%= f.submit "Select your Meal Preference", class: "btn btn-success" %>
     <% end %>
 </div>
