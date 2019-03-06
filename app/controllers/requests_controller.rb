@@ -17,6 +17,10 @@ class RequestsController < ApplicationController
 
   end
 
+  def index
+    @requests = Request.where(user: current_user)
+  end
+
   private
 
   def request_params
