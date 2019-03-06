@@ -91,18 +91,6 @@ ActiveRecord::Schema.define(version: 2019_03_06_160500) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "views", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_views_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
-  end
-
   add_foreign_key "meetings", "requests", column: "chooser_request_id"
   add_foreign_key "meetings", "requests", column: "chosen_request_id"
 end
