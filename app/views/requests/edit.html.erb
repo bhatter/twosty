@@ -1,1 +1,16 @@
-<h2> Choose your Meal Preference </h2>
+<div class="container">
+  <h2> Choose your date </h2>
+  <% @matching_requests.each do |match| %>
+  <div>
+    <%= link_to dates_path(request_a_id: @request, request_b_id: match.id), method: :post do  %>
+      <%= match.user.first_name %>
+    <% end %>
+      <%= match.user.age %>
+      <%= match.user.photo %>
+  </div>
+
+  <% end %>
+
+  <h2>Don't like your matches? Let someone choose you!</h2>
+  <p>These will be list of restaurants</p>
+</div>
