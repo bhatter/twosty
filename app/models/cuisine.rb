@@ -1,3 +1,3 @@
 class Cuisine < ApplicationRecord
-  has_many :restaurants, :requests
+  has_many :restaurants
 end
