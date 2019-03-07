@@ -1,12 +1,17 @@
-<h1>Meeting <%= @meeting.id %></h1>
+<div class="container">
 
-<div
-  id="map"
-  style="width: 30%;
-  height: 300px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+  <h1>Congratulations <%= current_user.first_name %>!</h1>
+  <p>You'll be meeting <%= @meeting.id %> </p>
+  <p>At the restaurant</p>
+
+  <div
+    id="map"
+    style="width: 30%;
+    height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
 
 <h3>Message</h3>
 <%= simple_form_for [@meeting, @message] do |f| %>
@@ -19,3 +24,4 @@
     <%= message.user.first_name %>: <%= message.content %>
   </div>
 <% end %>
+
