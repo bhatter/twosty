@@ -8,5 +8,4 @@
 
 cuisine1 = Cuisine.create(name: "italian")
 Restaurant.create(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine1.id)
-MAPBOX_API_KEY=pk.eyJ1IjoicGFzdGlsIiwiYSI6ImNqczRnOHA3dTAxd2M0M3Bjb3cxbmswYmwifQ.DRBz-kICv4zTajTXX8jkhQ
 
