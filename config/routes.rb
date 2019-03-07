@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   resources :cuisines, only: [:new, :create]
   resources :dates, only: [:index, :show, :create]
-  resources :meetings, only: [:create, :show]
-  resources :meetings, only: [:show]
+  resources :meetings, only: [:create, :show] do
+    resources :messages, only: [:create]
+  end
 end
