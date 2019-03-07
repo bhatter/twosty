@@ -2,6 +2,12 @@ class MeetingsController < ApplicationController
   def show
     @meeting = Meeting.find(params[:id])
     @message = Message.new
+    @request = Request.find(@meeting.chooser_request_id)
+    @restaurant = @request.restaurant
+    @markers = [
+      { lat: @restaurant.latitude,
+       lng: @restaurant.longitude }
+     ]
   end
 
   def create
