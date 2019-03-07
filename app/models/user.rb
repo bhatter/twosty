@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :age_preference_from, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :age_preference_to, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :photo, presence: true
+  mount_uploader :photo, PhotoUploader
 
   def age
     (Date.today.year - date_of_birth.year).to_i
