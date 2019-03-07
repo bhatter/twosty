@@ -25,7 +25,8 @@
           :end_year => 1900,
           :order => [ :day, :month, :year], :required => true %>
           <%= f.input :gender, :as => :radio_buttons, :collection => User.genders.keys %>
-          <%= f.input :photo  %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
           <%= f.input :age_preference_from %>
           <%= f.input :age_preference_to %>
           <%= f.input :gender_preference, :as => :radio_buttons, :collection => User.gender_preferences.keys %>

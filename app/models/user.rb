@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :requests
   has_many :messages
   has_many :meetings, through: :requests
+  has_many :meetings, through: :requests
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
@@ -16,6 +17,7 @@ class User < ApplicationRecord
   validates :age_preference_from, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :age_preference_to, presence: true, numericality: { greater_than_or_equal_to: 18}
   validates :photo, presence: true
+  mount_uploader :photo, PhotoUploader
 
   def age
     (Date.today.year - date_of_birth.year).to_i

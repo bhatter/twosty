@@ -10,6 +10,10 @@ class MeetingsController < ApplicationController
      ]
   end
 
+  def index
+    @meetings = Meeting.joins(:chooser_request, :chosen_request).where(requests: { user_id: current_user.id })
+  end
+
   def create
     @meeting = Meeting.new
     @meeting.chooser_request_id = params[:chooser_request_id]
