@@ -2,6 +2,12 @@ class MatchesController < ApplicationController
   def index
     @request = Request.find(params[:request_id])
     @matching_requests = match_requests(@request)
+    @restaurants = Restaurant.where(cuisine_id: @request.cuisine_id)
+  end
+
+  def edit
+    @restaurants = Restaurant.where(cuisine_id: @request.cuisine_id)
+    @request = Request.find(params[:request_id])
   end
 
   private

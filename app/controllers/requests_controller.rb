@@ -14,8 +14,10 @@ class RequestsController < ApplicationController
     end
   end
 
-  def edit
-
+  def update
+    @request = Request.find(params[:id])
+    @request.update(restaurant_id: params[:restaurant_id])
+    redirect_to meetings_path
   end
 
   def index
