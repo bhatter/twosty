@@ -5,10 +5,13 @@
   <% @matching_requests.each do |match| %>
   <div>
     <%= link_to meetings_path(chooser_request_id: @request.id, chosen_request_id: match.id), method: :post do  %>
-      <%= match.user.first_name %>
+    <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= match.user.first_name %>
+    <%= match.user.age %>
+    <%= match.user.photo %>
+    </div>
+
     <% end %>
-      <%= match.user.age %>
-      <%= match.user.photo %>
   </div>
 
   <% end %>
