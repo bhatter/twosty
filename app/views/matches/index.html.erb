@@ -17,5 +17,13 @@
   <% end %>
 
   <h2>Don't like your matches? Let someone choose you!</h2>
-  <p>These will be list of restaurants</p>
+  <% @restaurants.each do |restaurant| %>
+    <div>
+       <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
+        <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= restaurant.name %>
+      <% end %>
+    </div>
+
+  <% end %>
 </div>
