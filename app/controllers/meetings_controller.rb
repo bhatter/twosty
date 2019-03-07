@@ -6,7 +6,7 @@ class MeetingsController < ApplicationController
     @restaurant = @request.restaurant
     @markers = [
       { lat: @restaurant.latitude,
-       lng: @restaurant.longitude }
+        lng: @restaurant.longitude }
      ]
   end
 
