@@ -9,4 +9,3 @@
 cuisine1 = Cuisine.create(name: "italian")
 Restaurant.create(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine1.id)
 
-
