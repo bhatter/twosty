@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :requests
   has_many :messages
   has_many :meetings, through: :requests
+  has_many :meetings, through: :requests
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
