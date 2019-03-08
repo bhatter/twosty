@@ -4,13 +4,13 @@ body{
   }
 
   #section_one {
-    height: 100%;
+    height: 100vh;
     transition: all 1s ease;
     background-color: #41AFF8;
   }
 
   #section_two {
-    height: 100%;
+    height: 100vh;
     transition: all 1s ease;
     transform: translateY(100vh);
     opacity: 0;
@@ -18,7 +18,7 @@ body{
   }
 
   #section_tree {
-    height: 100%;
+    height: 100vh;
     transition: all 1s ease;
     transform: translateY(100vh);
     opacity: 0;
