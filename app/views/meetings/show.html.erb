@@ -2,8 +2,16 @@
 
   <h1>Congratulations <%= current_user.first_name %>!</h1>
 
-  <p>You'll be meeting <%= @meeting.chosen_request.user.first_name %> </p>
+  <p>You'll be meeting <% if current_user == @meeting.chooser_request.user %>
+      <%= @meeting.chosen_request.user.first_name %>
+    <% else %>
+      <%= @meeting.chooser_request.user.first_name %>
+    <% end %>
+  </p>
+  <p>On <%= @meeting.chooser_request.meeting_date %></p>
+
   <p>At the restaurant <%= @restaurant.name %> </p>
+  <p><%= @restaurant.address %></p>
 
   <div
     id="map"
@@ -12,17 +20,18 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-</div>
 
-<h3>Message</h3>
-<%= simple_form_for [@meeting, @message] do |f| %>
-  <%= f.input :content %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
 
-<% @meeting.messages.each do |message| %>
+  <h3>Message <%=  %></h3>
+    <%= simple_form_for [@meeting, @message] do |f| %>
+    <%= f.input :content %>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+
+  <% @meeting.messages.each do |message| %>
   <div>
     <%= message.user.first_name %>: <%= message.content %>
   </div>
-<% end %>
+  <% end %>
 
+</div>
