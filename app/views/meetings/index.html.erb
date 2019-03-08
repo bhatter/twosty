@@ -13,8 +13,8 @@
     <div class="tab-pane active" id="1a">
       <ul>
         <% @meetings.each do |meeting| %>
-        <% if (meeting.chosen_request.meeting_date >= Date.today) %>
-        <li> <%= cl_image_tag meeting.chosen_request.user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.chosen_request.user.first_name %> &nbsp &nbsp <%= meeting.chosen_request.meeting_date %>  </li>
+        <% if (meeting.requests.first.meeting_date >= Date.today) %>
+        <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
           <% end %>
           <% end %>
         </ul>
@@ -22,8 +22,8 @@
       <div class="tab-pane" id="2a">
         <ul>
           <% @meetings.each do |meeting| %>
-          <% unless (meeting.chosen_request.meeting_date >= Date.today) %>
-          <li> <%= cl_image_tag meeting.chosen_request.user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.chosen_request.user.first_name %> &nbsp &nbsp <%= meeting.chosen_request.meeting_date %>  </li>
+          <% unless (meeting.requests.first.meeting_date < Date.today) %>
+          <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
             <% end %>
             <% end %>
           </ul>

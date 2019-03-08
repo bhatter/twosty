@@ -2,13 +2,13 @@
 
 <div class="container">
   <h2> Choose your date </h2>
-  <% @matching_requests.each do |match| %>
+  <% @matching_requests.each do |matched_request| %>
   <div>
-    <%= link_to meetings_path(chooser_request_id: @request.id, chosen_request_id: match.id), method: :post do  %>
+    <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
     <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <%= match.user.first_name %>
-    <%= match.user.age %>
-    <%= match.user.photo %>
+    <%= matched_request.user.first_name %>
+    <%= matched_request.user.age %>
+    <%= matched_request.user.photo %>
     </div>
 
     <% end %>
