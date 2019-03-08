@@ -9,7 +9,7 @@ const scrollDown = () => {
     sec1.style.transform = `translateY(-100vh)`;
     sec1.style.opacity = 0;
 
-    sec2.style.transform = `translateY(-112vh)`;
+    sec2.style.transform = `translateY(-90vh)`;
     sec2.style.opacity = 1;
   });
 
@@ -17,7 +17,7 @@ const scrollDown = () => {
     sec2.style.transform = `translateY(-100vh)`;
     sec2.style.opacity = 0;
 
-    sec3.style.transform = `translateY(-211vh)`;
+    sec3.style.transform = `translateY(-180vh)`;
     sec3.style.opacity = 1;
   });
 };
