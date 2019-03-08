@@ -2,7 +2,7 @@ class MeetingsController < ApplicationController
   def show
     @meeting = Meeting.find(params[:id])
     @message = Message.new
-    @request = Request.find(@meeting.chooser_request_id)
+    @request = @meeting.requests.where.not(restaurant_id: nil).first
     @restaurant = @request.restaurant
     @markers = [
       { lat: @restaurant.latitude,
@@ -11,14 +11,17 @@ class MeetingsController < ApplicationController
   end
 
   def index
-    @meetings = Meeting.joins(:chooser_request, :chosen_request).where(requests: { user_id: current_user.id })
+    @meetings = current_user.meetings
+    # @meetings = Meeting.joins(:chooser_request, :chosen_request).where(requests: { user_id: current_user.id })
   end
 
   def create
+    @request = Request.find(params[:request_id])
+    @matched_request = Request.find(params[:matched_request_id])
     @meeting = Meeting.new
-    @meeting.chooser_request_id = params[:chooser_request_id]
-    @meeting.chosen_request_id = params[:chosen_request_id]
     if @meeting.save
+      @request.update(meeting: @meeting)
+      @matched_request.update(meeting: @meeting)
       redirect_to meeting_path(@meeting)
     end
   end

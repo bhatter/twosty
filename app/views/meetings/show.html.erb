@@ -2,13 +2,9 @@
 
   <h1>Congratulations <%= current_user.first_name %>!</h1>
 
-  <p>You'll be meeting <% if current_user == @meeting.chooser_request.user %>
-      <%= @meeting.chosen_request.user.first_name %>
-    <% else %>
-      <%= @meeting.chooser_request.user.first_name %>
-    <% end %>
-  </p>
-  <p>On <%= @meeting.chooser_request.meeting_date %></p>
+  <p>You'll be meeting <%= @meeting.other_user_request(current_user).user.first_name %></p>
+
+  <p>On <%= @meeting.requests.first.meeting_date %></p>
 
   <p>At the restaurant <%= @restaurant.name %> </p>
   <p><%= @restaurant.address %></p>
