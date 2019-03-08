@@ -6,8 +6,8 @@
 
     <%= simple_form_for(@request) do |f| %>
       <%= f.input :location, input_html: { id: "location" } %>
-      <%= f.association :cuisine, as: :radio_buttons %>
-      <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.association :cuisine, as: :radio_buttons, input_html: { id: "cuisine" } %>
+      <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"}, input_html: { id: "meeting_date" } %>
       <%= f.submit "Select your Meal Preference", class: "btn btn-success" %>
     <% end %>
   </div>
