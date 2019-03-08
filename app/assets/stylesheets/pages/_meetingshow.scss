@@ -1,0 +1,36 @@
+#image-meeting {
+
+  weight: 310px;
+  margin: auto;
+
+}
+
+.congratulations h1{
+font-size: 30px;
+color: #52C0EC;
+font: avenir;
+}
+
+.meeting-details {
+margin: 10px -22px;
+font-size: 15px;
+font: avenir;
+padding: 10px 25px;
+border-radius: 5px;
+border-style: solid;
+border-color: #52C0EC;
+border-width: thin;
+}
+
+
+
+.upper-part {
+  display: flex;
+  justify-content: inline-block;
+  align-items: center;
+}
+
+
+.button-chat {
+  background-color: #52C0EC;
+}
