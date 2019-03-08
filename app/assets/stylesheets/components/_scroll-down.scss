@@ -1,0 +1,26 @@
+body{
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  #section_one {
+    height: 100%;
+    transition: all 1s ease;
+    background-color: #41AFF8;
+  }
+
+  #section_two {
+    height: 100%;
+    transition: all 1s ease;
+    transform: translateY(100vh);
+    opacity: 0;
+    background-color: #ED474A;
+  }
+
+  #section_tree {
+    height: 100%;
+    transition: all 1s ease;
+    transform: translateY(100vh);
+    opacity: 0;
+    background-color: #61E1E2;
+  }

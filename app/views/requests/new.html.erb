@@ -1,14 +1,30 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
 
-    <h2> Create a new request </h2>
+<section id="section_one">
+  <div class="container">
+    <div class="row product-title-info">
+      <div class="col-md-12">
+        <h2> Create a new request </h2>
+        <%= simple_form_for(@request) do |f| %>
+        <%= f.input :location, input_html: { id: "location" } %>
+        <a class="ct-btn-scroll"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png" id="first_scroll_btn"></a>
+      </div>
+    </div>
+  </div>
 
+</section>
+<section id="section_two">
+  <div class="container">
+   <%= f.association :cuisine, as: :radio_buttons %>
+   <a class="ct-btn-scroll"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png" id="second_scroll_btn"></a>
+ </div>
+</section>
 
-    <%= simple_form_for(@request) do |f| %>
-      <%= f.input :location, input_html: { id: "location" } %>
-      <%= f.association :cuisine, as: :radio_buttons, input_html: { id: "cuisine" } %>
-      <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"}, input_html: { id: "meeting_date" } %>
-      <%= f.submit "Select your Meal Preference", class: "btn btn-success" %>
+</section>
+<section id="section_tree">
+  <div class="container">
+    <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.submit "Look for a Match", class: "btn btn-success" %>
     <% end %>
   </div>
-</div>
+</section>
+
