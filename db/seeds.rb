@@ -5,9 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Cuisine.destroy_all
+Restaurant.destroy_all
 
-cuisine1 = Cuisine.create!(name: "italian")
-Restaurant.create!(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine1.id)
+puts "succesfully destroyed records"
+
+cuisine_italian = Cuisine.create!(name: "italian")
+cuisine_indian = Cuisine.create!(name: "indian")
+cuisine_japanese = Cuisine.create!(name: "japanese")
+Restaurant.create!(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
 
 
 
@@ -114,3 +121,6 @@ url20 ="https://images.unsplash.com/photo-1513732822839-24f03a92f633?ixlib=rb-1.
 andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1965-05-25" , gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
+
+
+puts "succesfully created #{User.count}"

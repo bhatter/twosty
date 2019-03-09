@@ -1,29 +1,42 @@
-<h1>Matches</h1>
-
 <div class="container">
-  <h2> Choose your date </h2>
-  <% @matching_requests.each do |matched_request| %>
-  <div>
-    <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
-    <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <%= matched_request.user.first_name %>
-    <%= matched_request.user.age %>
-    <%= matched_request.user.photo %>
-    </div>
-
-    <% end %>
+  <div class="match-index-label">
+    <h1 >Choose your date!</h1>
   </div>
 
+  <% @matching_requests.each do |matched_request| %>
+    <div class="match-index-card">
+      <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
+          <div class="match-index-card-picture">
+            <%= cl_image_tag matched_request.user.photo.url, class: "cl-photo" %>
+          </div>
+          <div class="match-index-card-text-name">
+              <%= matched_request.user.first_name %>,
+              <%= matched_request.user.age %>
+          </div>
+          <div class="match-index-card-text-restaurant">
+            <p>  <%= @request.restaurant.name %>
+              <br>
+              <%= @request.restaurant.address %>
+            </p>
+          </div>
+    </div>
+    <% end %>
+
+
   <% end %>
 
-  <h2>Don't like your matches? Let someone choose you!</h2>
+  <div class="match-index-or">
+    <h2> OR
+    <br> Let someone choose you!</h2>
+  </div>
   <% @restaurants.each do |restaurant| %>
-    <div>
-       <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
-        <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= restaurant.name %>
-      <% end %>
-    </div>
-
+  <div class="match-index-card">
+   <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
+   <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= restaurant.name %>
+    <% end %>
+  </div>
   <% end %>
 </div>
+
+
