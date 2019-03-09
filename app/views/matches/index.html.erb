@@ -14,29 +14,35 @@
               <%= matched_request.user.age %>
           </div>
           <div class="match-index-card-text-restaurant">
-            <p>  <%= @request.restaurant.name %>
+            <p> <%= @request.restaurant.name %>
               <br>
               <%= @request.restaurant.address %>
             </p>
           </div>
     </div>
     <% end %>
-
-
   <% end %>
 
   <div class="match-index-or">
     <h2> OR
     <br> Let someone choose you!</h2>
   </div>
+
   <% @restaurants.each do |restaurant| %>
-  <div class="match-index-card">
+  <div class="match-index-card-rest">
    <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
-   <div class="card-match" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <%= restaurant.name %>
+      <div class="match-index-card-picture", style = "background-image: url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg')">
+      </div>
+
+      <div class="match-index-card-text-restaurant">
+        <p>
+          <%= restaurant.name %>
+          <br>
+          <%= restaurant.address %>
+        </p>
+
+      </div>
     <% end %>
   </div>
   <% end %>
 </div>
-
-

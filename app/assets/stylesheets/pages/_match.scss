@@ -26,7 +26,6 @@
     font-size: 25px;
     text-align: center;
   }
-
 }
 
 .match-index-card-text-restaurant {
@@ -39,7 +38,7 @@
 
 .match-index-card-text-name {
   position: absolute;
-  bottom: 130px;
+  top: 375px;
   left: 18px;
   color: white;
   font-size: 25px;
@@ -71,4 +70,11 @@
 .match-index-card-picture > img {
   width: 100%;
   border-radius: 15px;
+}
+
+.match-index-card-rest {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }

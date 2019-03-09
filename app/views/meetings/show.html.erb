@@ -17,8 +17,6 @@
     <p><strong><%= @restaurant.address %></strong></p>
   </div>
 
-
-
   <div
     id="map"
     style="width: 100%;
@@ -27,17 +25,20 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
-  <div id="messages">
-    <h3>Message <%=  %></h3>
-      <%= simple_form_for [@meeting, @message] do |f| %>
-      <%= f.input :content %>
-      <%= f.submit class: "btn btn-primary"%>
+  <div id="messages-form">
+    <h3>Conversation <%=  %></h3>
+      <%= simple_form_for([@meeting, @message], remote: true) do |f| %>
+      <%= f.input :content , label: false%>
+      <%= f.submit class: "btn btn-primary", value: 'Send Message' %>
     <% end %>
-
-    <% @meeting.messages.each do |message| %>
-    <div>
-      <%= message.user.first_name %>: <%= message.content %>
-    </div>
+  </div>
+  <div id="message-display">
+    <% if @meeting.messages.blank? %>
+      <p>Start your converstaion with <%= @meeting.other_user_request(current_user).user.first_name %>!</p>
+    <% else %>
+      <% @meeting.messages.each do |message| %>
+      <%= render 'messages/show', message: message %>
+      <% end %>
     <% end %>
   </div>
 </div>
