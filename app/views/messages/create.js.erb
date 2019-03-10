@@ -1,0 +1,5 @@
+var newMessage = "<p><%= @message.user.first_name %>: <%= @message.content %></p>";
+var messages = document.getElementById('message-display');
+messages.insertAdjacentHTML('afterbegin', newMessage);
+var inputBox = document.getElementById('message_content');
+inputBox.value = "";
