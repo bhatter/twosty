@@ -1,14 +1,30 @@
-#image-meeting {
+#image-meeting img{
 
-  weight: 310px;
+
   margin: auto;
+  border-radius: 50%;
+  height: 130px;
+
+  border: solid 7px rgba(0, 204, 188, 1);
+
+
 
 }
 
 .congratulations h1{
-font-size: 30px;
-color: #52C0EC;
-font: avenir;
+font-size: 56px;
+color: white;
+font-family: 'Yellowtail', cursive;
+text-shadow: 2px 2px grey;
+text-align: center;
+}
+
+.congratulations p {
+  color: white;
+  text-align: center;
+
+  text-shadow: 1px 1px grey;
+
 }
 
 .meeting-details {
@@ -26,11 +42,118 @@ border-width: thin;
 
 .upper-part {
   display: flex;
-  justify-content: inline-block;
+  justify-content: space-around;
   align-items: center;
+
 }
 
 
 .button-chat {
-  background-color: #52C0EC;
+  background-color: #FF4070;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 0.8px;
+  font: avenir;
+}
+
+.banner-meeting {
+  background-image: url("http://hd-wallpapersfd.info/wp-content/uploads/HTML/Ambient-Backgrounds/Ambient-Backgrounds6.jpg");
+  background-size: cover;
+  background-position: -498px -16px;
+  height: 480px;
+
+
+
+}
+
+layer {
+ background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 96;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+.row-1 {
+  padding: 5px;
+
+
+}
+
+.ta-1 table, td {
+  border: 1px solid #ddd;
+  background: white;
+  border-style: solid;
+  border-color: grey;
+  border-width: 2px;
+
+
+
+}
+
+.ta-1 {
+
+  margin: auto;
+   align-items: center;
+margin-top: -225px;
+margin-bottom: 1px;
+
+
+}
+
+.ta-1 td{
+  padding: 25px;
+  padding-left: 20px;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.question-m {
+ font-size: 13px;
+ color: grey;
+
+}
+
+.answer-m {
+  font-size: 17px;
+}
+
+.say {
+  font-size: 5px;
+  display: flex;
+  position: absolute;
+  top: 0px;
+}
+
+.chat {
+  background: white;
+  margin: 5px;
+  margin-right: 155px;
+  padding: 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+#messages {
+  margin-top: 40px;
+}
+
+.typing  {
+}
+
+.chat-enter {
+
+}
+
+.background-chat {
+
 }

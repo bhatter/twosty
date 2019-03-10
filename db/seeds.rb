@@ -11,7 +11,13 @@ Restaurant.destroy_all
 
 puts "succesfully destroyed records"
 
+
 cuisine_italian = Cuisine.create!(name: "italian")
+
+
+
+
+
 Restaurant.create!(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
 
 
