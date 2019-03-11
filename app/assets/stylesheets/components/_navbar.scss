@@ -7,6 +7,11 @@
   position: fixed;
   z-index: 1;
 }
+
+a {
+  color: white;
+}
+
 .btn-new {
   border-radius: 3px;
   background-color: white;
@@ -14,9 +19,7 @@
   width: 57%;
   margin: auto;
 }
-a {
-  color: white;
-}
+
 
 .profile-menu {
   height: 300px;

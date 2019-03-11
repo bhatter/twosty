@@ -73,6 +73,23 @@ $pink: #fc3768;
 
 }
 
+a {
+  &:active {
+    color: red;
+  }
+}
+
+.nav {
+  height: 60px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  li {
+    width: 50%;
+  }
+}
+
+
 
 .color-layer {
   background-color: rgba(107, 23, 102, 0.5);
