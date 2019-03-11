@@ -1,12 +1,15 @@
+<div class="full-screen">
 
-<div class="color-change">
+<div class="parallax">
+
+<div class="section color-change">
 <section id="section_one">
   <div class="container">
     <div class="row product-title-info">
       <div class="col-md-12">
         <h2> Create a new request </h2>
         <%= simple_form_for(@request) do |f| %>
-        <%= f.input :location, input_html: { id: "location" } %>
+        <%= f.input :location , label: false, placeholder: "Location", input_html: { id: "location" } %>
         <%= image_tag "arrow.svg", class: "ct-btn-scroll", id: "first_scroll_btn" %>
 
       </div>
@@ -29,4 +32,7 @@
   <% end %>
   </div>
 </section>
+</div>
+</div>
+
 </div>
