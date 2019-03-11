@@ -6,8 +6,6 @@
     <h1 >Choose your date!</h1>
   </div>
 
-
-
   <div id="MagicCarousel" class="carousel slide" data-ride="true" data-interval="false">
     <div class="carousel-inner">
       <% @matching_requests.each_with_index do |matched_request, index| %>
@@ -60,6 +58,9 @@
           <%= restaurant.name %>
           <br>
           <%= restaurant.address %>
+          <%# if restaurant.user.photo&.url %>
+            <%#= cl_image_tag(restaurant.photo.url, :width=>250, :height=>250, :crop=>"fill") %>
+          <%# end %>
         </p>
 
       </div>
