@@ -1,6 +1,3 @@
-//= require rails-ujs
-//= require_tree .
-
 function openPage(evt, pageName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -18,9 +15,10 @@ function openPage(evt, pageName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(pageName).style.display = "block";
-  evt.currentTarget.className += " active";
+   // document.getElementById(pageName).style.display = "block";
+  //  evt.currentTarget.className += " active";
 }
 
 
-  document.getElementById("defaultOpen").click();
+
+export { openPage };
