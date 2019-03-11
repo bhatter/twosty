@@ -2,42 +2,50 @@
     <div class="navbar">
       <%= image_tag "logo_twosty.svg", height: 50, class: "dropdown-toggle", id: "navbar-menu", "data-toggle" => "dropdown" %>
       <div id="sidebar">
-        <% if user_signed_in? %>
-          <ul style="list-style: none;", class="text-menu">
-            <li>
-              <%= link_to edit_user_registration_path(current_user) do %> &nbsp <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to meetings_path do %> &nbsp <%= t(".settings", default: "My Dates") %>
+          <% if user_signed_in? %>
+              <ul style="list-style: none; padding: 0", class="text-menu">
+                <div class='profile-menu'>
+                  <%= cl_image_tag(current_user.photo.url(:find_face), class: "profile-face-big" ) %>
+                  <li>
+                     <h1>Hello <%= current_user.first_name %>!</h1>
+                      </li>
+                      <li class="btn-new">
+                      <%= link_to "Edit Profile", edit_user_registration_path(current_user) %>
+                      </li>
+                </div>
+                <li>
+               <%= link_to root_path do %> &nbsp <%= t(".home", default: "Home") %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to meetings_path do %> &nbsp <%= t(".settings", default: "My Dates") %>
 
-              <% end %>
-            </li>
-            <li>
-              <%= link_to root_path do %> &nbsp <%= t(".home", default: "Home") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %> &nbsp <%= t(".sign_out", default: "Logout") %>
-              <% end %>
-            </li>
-          </ul>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to new_request_path do %> &nbsp <%= t(".findadate", default: "Find A Date") %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %> &nbsp <%= t(".sign_out", default: "Logout") %>
+                  <% end %>
+                </li>
+              </ul>
           <% else %>
-          <ul style="list-style: none;", class="text-menu">
-            <li>
-              <%= link_to new_user_session_path do %> &nbsp <%= t(".login", default: "Login") %>
-
-              <% end %>
-            </li>
-            <li>
-              <%= link_to new_user_registration_path do %> &nbsp <%= t(".register", default: "Register") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to root_path do %> &nbsp <%= t(".home", default: "Home") %>
-              <% end %>
-            </li>
-          </ul>
+            <ul style="list-style: none;", class="text-menu">
+              <li>
+                <%= link_to new_user_session_path do %> &nbsp <%= t(".login", default: "Login") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to new_user_registration_path do %> &nbsp <%= t(".register", default: "Register") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to root_path do %> &nbsp <%= t(".home", default: "Home") %>
+                <% end %>
+              </li>
+            </ul>
         <% end %>
       </div>
     </div>

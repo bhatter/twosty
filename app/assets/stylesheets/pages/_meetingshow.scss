@@ -1,36 +1,284 @@
-#image-meeting {
 
-  weight: 310px;
-  margin: auto;
+.meet-image {
+  height: auto;
+  max-height: 100%;
+  width: 10px;
+  margin: 0px;
+  padding: 0px;
 
+}
+
+
+
+#image-meeting img{
+
+
+  height: 494px;
+  width: 376px;
+
+
+
+}
+
+
+.color-user {
+  color: pink;
 }
 
 .congratulations h1{
-font-size: 30px;
-color: #52C0EC;
-font: avenir;
+font-size: 56px;
+color: white;
+font-family: 'Yellowtail', cursive;
+text-shadow: 2px 2px grey;
+text-align: center;
+}
+
+.congratulations p {
+  color: white;
+  text-align: center;
+
+  text-shadow: 1px 1px grey;
+
 }
 
 .meeting-details {
-margin: 10px -22px;
-font-size: 15px;
-font: avenir;
+margin: -3px -22px;
+background-color: rgba(255, 255, 255, 0.4);
 padding: 10px 25px;
-border-radius: 5px;
 border-style: solid;
-border-color: #52C0EC;
 border-width: thin;
+
+top: 549px;
+text-align: left;
+
+top: 285px;
+
+
+.meet  {
+  font-size: 26px;
+  font-family: 'Sniglet', cursive;
+  text-align: center;
+
+}
+
+.place {
+margin-top: 0px;
+margin-bottom: 3px;
+font-size: 26px;
+ font-family: 'Sniglet', cursive;
+ text-align: center;
+ color: grey;
+}
+
+.where {
+ font-size: 22px;
+ font-family: 'Sniglet', cursive;
+ text-align: center;
+ color: grey;
+ margin: 3px auto;
+ padding-top: 14px;
+}
+
+
+
+
+background: white;
+
 }
 
 
 
 .upper-part {
   display: flex;
-  justify-content: inline-block;
+  justify-content: space-around;
   align-items: center;
+
 }
 
 
 .button-chat {
+  background-color: #FF4070;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 0.8px;
+  font-family: avenir;
+  position: absolute;
+  top: 5px;
+
+}
+
+
+
+
+layer {
+ background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 96;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+.row-1 {
+  padding: 5px;
+
+
+}
+
+
+.chat {
+  // background: white;
+  // margin: 5px;
+  // margin-right: 155px;
+  // padding: 18px;
+  // font-size: 14px;
+  // border-radius: 20px;
+  // margin-top: 10px;
+}
+
+#messages {
+  margin-top: -6px;
+  height: 300px;
+  overflow: auto;
+  background: #e0e0e0;
+  margin-left: -13px;
+  margin-bottom: -26px;
+  margin-right: -17px;
+
+}
+
+.chat user_one {
+margin: 5px;
+}
+
+
+.background-chat {
+
+}
+
+#map {
+
+
+}
+
+
+
+.tab-1 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-1 button {
   background-color: #52C0EC;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 45px;
+  transition: 0.3s;
+  font-size: 25px;
+  margin-left: 3px;
+  margin-right: -10px;
+  padding-right: 45px;
+  font-family: avenir;
+  color: white;
+}
+
+.message-button {
+  margin-left: 0px;
+  padding-right: 15px;
+}
+
+
+.map-button button {
+  margin-left: 10px;
+  padding-right: 81px;
+  padding-left: 67px;
+  margin-right: 0px;
+}
+
+/* Change background color of buttons on hover */
+.tab-1 button:hover {
+  background-color: #2e94bd;
+}
+.user_one {
+  width: 100vw;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  decoration: none;
+  .chat-content {
+    background-color: white;
+
+  padding: 18px;
+  font-size: 17px;
+  border-radius: 20px;
+  margin-top: 10px;
+  }
+}
+
+.user_two {
+  width: 100vw;
+  text-align: right;
+  display: flex;
+  justify-content: flex-start;
+  .chat-content {
+    background-color: white;
+
+  padding: 18px;
+  font-size: 17px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 16px;
+  }
+}
+
+.chat-enter {
+  input {
+    height: 62px;
+    border-radius: 14px;
+    margin-right: 10px;
+  }
+  display: flex;
+  justify-content: space-around;
+}
+/* Create an active/current tablink class */
+
+.chat-enter {
+  input {
+
+  }
+}
+
+
+
+.tab-1 button.active {
+  background-color: #0b7ca9;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+
+
+  border-top: none;
+}
+
+.colorful-name {
+color: #FF5A83;
+font-family: 'Sniglet', cursive;
+}
+
+.say {
+  height: 50px;
+}
+
+.image-card-meeting {
+background: white;
 }

@@ -1,19 +1,29 @@
-  <div id="img-landingpage">
-    <div class="container">
-
-    <h1>Why eat out alone when you can..</h1>
-    <br>
-    <h1>twosty</h1>
-  </div>
- </div>
-    <div class="container">
-    <%= link_to "Get Started", new_request_path, class: "btn btn-primary text-center btn-home"%>
-  <div>
-    <h3>How it works</h3>
-    <ul>
-      <li>Sign up and fill out your future date preferences!</li>
-      <li>Choose when and where you want your date</li>
-      <li>Get matched</li>
-    </ul>
+<div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1549267419-dd7877f9ea02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+  <div class="parallax">
+    <div class="section">
+      <h1>Why eat out alone when you can..</h1>
+      <br>
+      <h1>Twosty</h1>
+      <%= link_to "Get Started", new_request_path, class: "btn btn-success text-center btn-home"%>
+      <div>
+      <p>How it works</p>
+      <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
+      </div>
+    </div>
+    <div class="section">
+      <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
+      <h2>How it works<br></h3>
+        <ul class="list-unstyled">
+          <br>
+          <br>
+          <li> <i class="glyphicon glyphicon-log-in"></i>  Create your Profile to select your Gender and Age preferences</li>
+          <br>
+          <li> <i class="glyphicon glyphicon-ok-circle"></i>  Select a Location, a Date and Choose your favorite Cuisine</li>
+          <br>
+          <li> <i class="glyphicon glyphicon-ok-sign"></i>  Select a Match and a Restaurant</li>
+        </ul>
+        <%= link_to "Get Started", new_request_path, class: "btn btn-success text-center btn-home"%>
+      <h4>Enjoy your date!</h2>
+    </div>
   </div>
 </div>
