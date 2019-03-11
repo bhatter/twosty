@@ -14,12 +14,16 @@
                       </li>
                 </div>
                 <li>
+               <%= link_to root_path do %> &nbsp <%= t(".home", default: "Home") %>
+                  <% end %>
+                </li>
+                <li>
                   <%= link_to meetings_path do %> &nbsp <%= t(".settings", default: "My Dates") %>
 
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to root_path do %> &nbsp <%= t(".home", default: "Find A Date") %>
+                  <%= link_to new_request_path do %> &nbsp <%= t(".findadate", default: "Find A Date") %>
                   <% end %>
                 </li>
                 <li>

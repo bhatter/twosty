@@ -7,7 +7,7 @@
   color: white;
   font-weight:bold;
   text-align: center;
-  padding: 70px;
+  padding: 70px, 10px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,17 +15,25 @@
 }
 
 .section {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 70px);
   transition: all 1s ease;
-  padding: 5%;
-  margin-bottom: 140px;
+  padding: 5% 5% 20% 5%;
+  margin-top: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
 .ct-btn-scroll {
   height: 30px;
-  margin: 50px;
+  // margin: 50px;
+}
+
+.scroll_down_btn {
+  margin-bottom: 0px;
+}
+
+.scroll_up_btn {
+margin-top: 0px;
 }
