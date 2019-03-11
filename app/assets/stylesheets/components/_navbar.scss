@@ -7,6 +7,32 @@
   position: fixed;
   z-index: 1;
 }
+.btn-new {
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 1px 1px 9px 0px #4747474d;
+  width: 57%;
+  margin: auto;
+}
+a {
+  color: white;
+}
+
+.profile-menu {
+  height: 300px;
+  a {
+    color: grey;
+    font-size: 20px;
+  }
+}
+
+.btn-profile {
+    padding: 5px;
+    a {
+      color: red;
+    }
+  }
+
 
 #sidebar {
   width: 100%;
@@ -18,9 +44,22 @@
   transition: all 0.5s ease;
   z-index: 1;
   text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   color: white !important;
   font-size: 30px;
   font-weight: bold;
+  li {
+    &:hover {
+      color: blue;
+    }
+
+  }
+  a {
+    font-weight: 300;
+    line-height: 4px;
+  }
 }
 
 .active-sidebar {
@@ -29,8 +68,6 @@
 
 .text-menu {
   text-align: center;
-  padding: 50px;
-  margin: 20%;
 }
 
 #navbar-menu {

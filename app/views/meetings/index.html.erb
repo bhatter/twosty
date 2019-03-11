@@ -1,32 +1,73 @@
 
-<div class="container"><h1> My Dates Dashboard </h1></div>
-<div id="exTab1" class="container">
+<!-- <div class="container"><h1> My Dates</h1></div> -->
+  <div class="top-view">
+    <div class="color-layer">
+<!--       <div class="navbar">
+        <a href="#"><i class="icon burger"></i></a>
+        <a href="#"><i class="icon search right"></i></a>
+      </div> -->
+      <div class="header">
+        <h1>Hello <%= current_user.first_name %>!</h1>
+        <div class="profile-container">
+          <%= cl_image_tag(current_user.photo.url(:find_face), class: "profile-face-big" ) %>
+<!--           <div class="notifications"><span>3</span></div> -->
+        </div>
+      </div>
+<!--       <div class="month-selection">
+        <i class="icon arrow-left"></i>
+        <i class="icon right arrow-right"></i>
+        <span class="month">February</span>
+      </div> -->
+    </div>
+  </div>
+
+<div id="exTab1" class="">
   <ul  class="nav nav-pills">
     <li class="active">
-      <a  href="#1a" data-toggle="tab">My confirmed Dates</a>
+      <a  href="#1a" data-toggle="tab">Confirmed Dates</a>
     </li>
     <li><a href="#2a" data-toggle="tab">History</a>
     </li>
   </ul>
-
   <div class="tab-content clearfix">
     <div class="tab-pane active" id="1a">
-      <ul>
         <% @meetings.each do |meeting| %>
-        <% if (meeting.requests.first.meeting_date >= Date.today) %>
-        <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
+          <% if (meeting.requests.first.meeting_date >= Date.today) %>
+            <div class="entry-container">
+              <div class="entry">
+                <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face_small), class: "profile-face text d-inline" %>
+                <div class="text d-inline">
+                  <span class="time text d-inline"><%= meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </span>
+                  <div>
+                    <span class="title text d-inline">Meet <span class="name text d-inline"><%= meeting.other_user_request(current_user).user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
+                    <span class="address"> <%= meeting.restaurant.address %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% end %>
-          <% end %>
-        </ul>
+        <% end %>
+
       </div>
       <div class="tab-pane" id="2a">
-        <ul>
-          <% @meetings.each do |meeting| %>
-          <% unless (meeting.requests.first.meeting_date < Date.today) %>
-          <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
-            <% end %>
-            <% end %>
-          </ul>
-        </div>
+        <% @meetings.each do |meeting| %>
+          <% unless (meeting.requests.first.meeting_date > Date.today) %>
+            <div class="entry-container">
+              <div class="entry">
+                <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face_small), class: "profile-face text d-inline" %>
+                <div class="text d-inline">
+                  <span class="time text d-inline"><%= meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </span>
+                  <div>
+                    <span class="title text d-inline">Meet <span class="name text d-inline"><%= meeting.other_user_request(current_user).user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
+                    <span class="address"> <%= meeting.restaurant.address %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        <% end %>
       </div>
-    </div>
+  </div>
+</div>
+

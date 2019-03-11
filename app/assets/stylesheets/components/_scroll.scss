@@ -1,0 +1,31 @@
+.full-screen {
+  max-height: 100vh;
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  font-family: 'Avenir';
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  padding: 70px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  height: calc(100vh - 140px);
+  transition: all 1s ease;
+  padding: 5%;
+  margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ct-btn-scroll {
+  height: 30px;
+  margin: 50px;
+}
