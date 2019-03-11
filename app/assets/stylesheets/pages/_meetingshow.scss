@@ -168,14 +168,14 @@ position: relative;
 
 #messages {
   margin-top: 40px;
+  height: 200px;
+  overflow: auto;
 }
 
-.typing  {
+.chat user_one {
+margin: 5px;
 }
 
-.chat-enter {
-
-}
 
 .background-chat {
 
