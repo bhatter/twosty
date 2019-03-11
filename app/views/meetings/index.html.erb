@@ -1,9 +1,30 @@
 
-<div class="container"><h1> My Dates Dashboard </h1></div>
+<div class="container"><h1> My Dates</h1></div>
+  <div class="top-view">
+    <div class="color-layer">
+<!--       <div class="navbar">
+        <a href="#"><i class="icon burger"></i></a>
+        <a href="#"><i class="icon search right"></i></a>
+      </div> -->
+      <div class="header">
+        <h1>Hello <%= current_user.first_name %>!</h1>
+        <div class="profile-container">
+          <%= cl_image_tag(current_user.photo.url(:find_face), class: "profile-face-big" ) %>
+<!--           <div class="notifications"><span>3</span></div> -->
+        </div>
+      </div>
+<!--       <div class="month-selection">
+        <i class="icon arrow-left"></i>
+        <i class="icon right arrow-right"></i>
+        <span class="month">February</span>
+      </div> -->
+    </div>
+
+
 <div id="exTab1" class="container">
   <ul  class="nav nav-pills">
     <li class="active">
-      <a  href="#1a" data-toggle="tab">My confirmed Dates</a>
+      <a  href="#1a" data-toggle="tab">Confirmed Dates</a>
     </li>
     <li><a href="#2a" data-toggle="tab">History</a>
     </li>
@@ -30,3 +51,58 @@
         </div>
       </div>
     </div>
+  </div>
+
+
+<!--   <div class="bottom-view">  -->
+<!--     <div class="week-container">
+      <ul class="week">
+        <li class="day day-names"><span>sun</span></li>
+        <li class="day day-names"><span>mon</span></li>
+        <li class="day day-names"><span>tue</span></li>
+        <li class="day day-names"><span>wed</span></li>
+        <li class="day day-names"><span>thu</span></li>
+        <li class="day day-names"><span>fri</span></li>
+        <li class="day day-names"><span>sat</span></li>
+      </ul>
+      <ul class="week">
+        <li class="day"><span>7</span></li>
+        <li class="day current point"><span>8</span></li>
+        <li class="day"><span>9</span></li>
+        <li class="day"><span>10</span></li>
+        <li class="day"><span>11</span></li>
+        <li class="day point"><span>12</span></li>
+        <li class="day"><span>13</span></li>
+      </ul>
+    </div>
+ -->
+
+   <div class="entry-container">
+        <div class="entry">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
+          <div class="text d-inline">
+            <span class="title">Meet <span class="name">Lola</span></span>
+            <span class="time">on Thursday, 23rd February</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
+          <div class="text">
+            <span class="title">Meet <span class="name">Jane</span></span>
+            <span class="time">on Friday, 24th February</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
+          <div class="text">
+            <span class="title">Meet <span class="name">Amy</span></span>
+            <span class="time">on Monday, 11th March </span>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--   <div class="actionbutton"></div> -->
+</div>
+

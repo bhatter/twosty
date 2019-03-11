@@ -39,6 +39,9 @@
           <%= restaurant.name %>
           <br>
           <%= restaurant.address %>
+          <%# if restaurant.user.photo&.url %>
+            <%#= cl_image_tag(restaurant.photo.url, :width=>250, :height=>250, :crop=>"fill") %>
+          <%# end %>
         </p>
 
       </div>
