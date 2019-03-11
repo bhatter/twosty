@@ -14,9 +14,9 @@
               <%= matched_request.user.age %>
           </div>
           <div class="match-index-card-text-restaurant">
-            <p> <%= @request.restaurant.name %>
+            <p> <%= matched_request.restaurant.name %>
               <br>
-              <%= @request.restaurant.address %>
+              <%= matched_request.restaurant.address %>
             </p>
           </div>
     </div>
@@ -39,6 +39,9 @@
           <%= restaurant.name %>
           <br>
           <%= restaurant.address %>
+          <%# if restaurant.user.photo&.url %>
+            <%#= cl_image_tag(restaurant.photo.url, :width=>250, :height=>250, :crop=>"fill") %>
+          <%# end %>
         </p>
 
       </div>

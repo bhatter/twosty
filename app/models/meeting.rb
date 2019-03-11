@@ -9,4 +9,8 @@ class Meeting < ApplicationRecord
       request.user != user
     end
   end
+
+  def restaurant
+    requests.where.not(restaurant_id: nil).first.restaurant
+  end
 end
