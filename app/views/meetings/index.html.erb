@@ -1,5 +1,5 @@
 
-<div class="container"><h1> My Dates</h1></div>
+<!-- <div class="container"><h1> My Dates</h1></div> -->
   <div class="top-view">
     <div class="color-layer">
 <!--       <div class="navbar">
@@ -19,9 +19,9 @@
         <span class="month">February</span>
       </div> -->
     </div>
+  </div>
 
-
-<div id="exTab1" class="container">
+<div id="exTab1" class="">
   <ul  class="nav nav-pills">
     <li class="active">
       <a  href="#1a" data-toggle="tab">Confirmed Dates</a>
@@ -32,77 +32,43 @@
 
   <div class="tab-content clearfix">
     <div class="tab-pane active" id="1a">
-      <ul>
         <% @meetings.each do |meeting| %>
-        <% if (meeting.requests.first.meeting_date >= Date.today) %>
-        <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
+          <% if (meeting.requests.first.meeting_date >= Date.today) %>
+            <div class="entry-container">
+              <div class="entry">
+                <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face_small), class: "profile-face text d-inline" %>
+                <div class="text d-inline">
+                  <span class="time text d-inline"><%= meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </span>
+                  <div>
+                    <span class="title text d-inline">Meet <span class="name text d-inline"><%= meeting.other_user_request(current_user).user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
+                    <span class="address"> <%= meeting.restaurant.address %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% end %>
-          <% end %>
-        </ul>
+        <% end %>
+
       </div>
       <div class="tab-pane" id="2a">
-        <ul>
-          <% @meetings.each do |meeting| %>
-          <% unless (meeting.requests.first.meeting_date < Date.today) %>
-          <li> <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face), class: "avatar avatar-bordered" %> &nbsp &nbsp <%= meeting.other_user_request(current_user).user.first_name %> &nbsp &nbsp <%= meeting.other_user_request(current_user).meeting_date %>  </li>
-            <% end %>
-            <% end %>
-          </ul>
-        </div>
+        <% @meetings.each do |meeting| %>
+          <% unless (meeting.requests.first.meeting_date > Date.today) %>
+            <div class="entry-container">
+              <div class="entry">
+                <%= cl_image_tag meeting.other_user_request(current_user).user.photo.url(:find_face_small), class: "profile-face text d-inline" %>
+                <div class="text d-inline">
+                  <span class="time text d-inline"><%= meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </span>
+                  <div>
+                    <span class="title text d-inline">Meet <span class="name text d-inline"><%= meeting.other_user_request(current_user).user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
+                    <span class="address"> <%= meeting.restaurant.address %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        <% end %>
       </div>
-    </div>
   </div>
-
-
-<!--   <div class="bottom-view">  -->
-<!--     <div class="week-container">
-      <ul class="week">
-        <li class="day day-names"><span>sun</span></li>
-        <li class="day day-names"><span>mon</span></li>
-        <li class="day day-names"><span>tue</span></li>
-        <li class="day day-names"><span>wed</span></li>
-        <li class="day day-names"><span>thu</span></li>
-        <li class="day day-names"><span>fri</span></li>
-        <li class="day day-names"><span>sat</span></li>
-      </ul>
-      <ul class="week">
-        <li class="day"><span>7</span></li>
-        <li class="day current point"><span>8</span></li>
-        <li class="day"><span>9</span></li>
-        <li class="day"><span>10</span></li>
-        <li class="day"><span>11</span></li>
-        <li class="day point"><span>12</span></li>
-        <li class="day"><span>13</span></li>
-      </ul>
-    </div>
- -->
-
-   <div class="entry-container">
-        <div class="entry">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
-          <div class="text d-inline">
-            <span class="title">Meet <span class="name">Lola</span></span>
-            <span class="time">on Thursday, 23rd February</span>
-          </div>
-        </div>
-
-        <div class="entry">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
-          <div class="text">
-            <span class="title">Meet <span class="name">Jane</span></span>
-            <span class="time">on Friday, 24th February</span>
-          </div>
-        </div>
-
-        <div class="entry">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="" class="profile-face" />
-          <div class="text">
-            <span class="title">Meet <span class="name">Amy</span></span>
-            <span class="time">on Monday, 11th March </span>
-          </div>
-        </div>
-      </div>
-    </div>
-<!--   <div class="actionbutton"></div> -->
 </div>
 
