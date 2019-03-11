@@ -11,5 +11,5 @@ initMapbox();
 initAutocomplete();
 sidebarToggle();
 openPage();
-document.getElementById("defaultOpen").click();
+// document.getElementById("defaultOpen").click();
 scroll();

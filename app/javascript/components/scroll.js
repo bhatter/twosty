@@ -4,7 +4,11 @@ const scroll = () => {
   const sections = document.querySelectorAll(".section");
   let counter = 0;
 
+  console.log(arrowsDown)
+  console.log(arrowsUp)
+
   arrowsDown.forEach((arrowDown,index) => {
+    console.log(arrowDown)
     arrowDown.addEventListener("click", event => {
       console.log(counter);
       counter = counter - 100;
@@ -15,6 +19,7 @@ const scroll = () => {
   });
 
   arrowsUp.forEach((arrowUp,index) => {
+    console.log(arrowUp)
     arrowUp.addEventListener("click", event => {
       counter = counter + 100;
       sections[index+1].style.transform = "translateY(" + counter + "vh)";

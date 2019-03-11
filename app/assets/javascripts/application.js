@@ -23,4 +23,4 @@ function openPage(evt, pageName) {
 }
 
 
-  document.getElementById("defaultOpen").click();
+  // document.getElementById("defaultOpen").click();
