@@ -189,15 +189,15 @@ $pink: #fc3768;
 //     border-radius: 50%;
 //   }
 
-  span {
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    margin-top: -7px;
-  }
+  // span {
+  //   display: block;
+  //   text-align: center;
+  //   width: 100%;
+  //   font-size: 14px;
+  //   position: absolute;
+  //   top: 50%;
+  //   margin-top: -7px;
+  // }
 
 //     &.day-names span {
 //     color: $grey;
@@ -236,10 +236,11 @@ $pink: #fc3768;
 
 
 .title{
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 500;
 
   .name{
-    font-weight: 500;
+    font-weight: 1500;
   }
 }
 
