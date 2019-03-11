@@ -15,10 +15,15 @@ puts "succesfully destroyed records"
 cuisine_italian = Cuisine.create!(name: "italian")
 cuisine_indian = Cuisine.create!(name: "indian")
 cuisine_japanese = Cuisine.create!(name: "japanese")
-Restaurant.create!(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
+urlr1 = "https://images.unsplash.com/photo-1549400405-810ac18d73b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"
+piccola = Restaurant.new(name: "Piccola", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
+piccola.remote_photo_url = urlr1
+piccola.save!
 
-
-
+urlr2 = "https://images.unsplash.com/photo-1543807669-0d0730e95cb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+vapiano = Restaurant.new(name: "Vapiano", address: "Friedrichstraße 50-55, 10117 Berlin", cuisine_id: cuisine_italian.id)
+vapiano.remote_photo_url = urlr2
+vapiano.save!
 
 
 url1 ="https://images.unsplash.com/photo-1544098485-2a2ed6da40ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
