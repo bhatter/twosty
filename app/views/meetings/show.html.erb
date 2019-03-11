@@ -1,55 +1,70 @@
 <!-- #{@meeting.other_user_request(current_user).user.first_name}
 <%= current_user.first_name %>
 -->
-<div class="container">
-  <div class="banner-meeting">
-    <div class="congratulations">
-      <h1>Congratulations</h1>
-      <p>You'll be meeting <strong><%= @meeting.other_user_request(current_user).user.first_name %></strong></p>
+<div  >
+
+
+   <div id ="image-meeting">
+    <%= cl_image_tag @meeting.other_user_request(current_user).user.photo.url %>
     </div>
-    <div class = "upper-part">
-      <div id ="image-meeting">
-        <%= cl_image_tag @meeting.other_user_request(current_user).user.photo.url(:find_face) %>
-      </div>
+    <div class ="meeting-details">
+      <p>Meet <%= @meeting.other_user_request(current_user).user.first_name %><%= @meeting.other_user_request(current_user).meeting_date %><%= @restaurant.name %><%= @restaurant.address%></p>
+    </div>
+
+
+<!--
       <div>
         <%= link_to "Send message", "#messages", class: "btn btn-primary, button-chat" %>
       </div>
-    </div>
+-->
+
+
+
+
+
+
+
+<!-- Tab content -->
+
+
+
+
+
+
+
+
+<div class="tab-1">
+  <div class="message-button">
+    <button class="tablinks" onclick="openPage(event, 'container-chat')" id="defaultOpen">Message</button>
   </div>
-  <table class="ta-1">
-    <tbody>
-      <tr>
-        <td><p class="question-m">What day?</p><p class="answer-m"><strong><%= @meeting.requests.first.meeting_date %></strong></p></td>
-        <td><p class="question-m">What's the name?</p><p class="answer-m"><strong><%= @restaurant.name %></p></strong></td>
-      </tr>
-      <tr>
-        <td colspan="2"><p class="question-m">Where to go?</p><p class="answer-m"><strong><%= @restaurant.address %></strong></p></td>
-      </tr>
-      <tr>
-    </tbody>
-  </table>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 300px;"
+  <div class="map-button">
+    <button class="tablinks" onclick="openPage(event, 'map')" >Map</button>
+  </div>
+</div>
+<div id="map" class="tabcontent"
+    style="width: 340px;
+    height: 273px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <div class="background-chat">
-    <div id="messages">
-      <% @meeting.messages.each do |message| %>
-      <div class="chat">
-        <%= message.user.first_name %>: <%= message.content %>
+</div>
+  <div id="container-chat" class="tabcontent">
+    <div class="background-chat">
+      <div id="messages">
+        <% @meeting.messages.each do |message| %>
+        <div class="chat">
+          <%= message.user.first_name %>: <%= message.content %>
+        </div>
+        <% end %>
       </div>
+    </div>
+    <h3 class="typing"> <%=  %></h3>
+      <%= simple_form_for [@meeting, @message] do |f| %>
+    <div class="chat-enter">
+      <%= f.input :content, placeholder: "Say something", class: "say", label: false %>
+      <%= f.submit class: "btn btn-primary"%>
       <% end %>
     </div>
   </div>
-  <h3 class="typing"> <%=  %></h3>
-    <%= simple_form_for [@meeting, @message] do |f| %>
-  <div class="chat-enter">
-    <%= f.input :content, placeholder: "Say something", class: "say", label: false %>
-    <%= f.submit class: "btn btn-primary"%>
-    <% end %>
-  </div>
-</div>
+
+
+

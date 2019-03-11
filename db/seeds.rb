@@ -81,7 +81,7 @@ sandra.remote_photo_url = url11
 sandra.save!
 
 
-url12 ="https://images.unsplash.com/photo-1542662482-65e2129ea2bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
+url12 ="https://images.unsplash.com/photo-1544216387-c49cb9071370?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
 laura = User.new(email: "laura@gmail.com", first_name: "Laura", gender: "female", last_name: "Fawcett", date_of_birth: "1992-02-15", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 laura.remote_photo_url = url2
 laura.save!

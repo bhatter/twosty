@@ -1,14 +1,33 @@
+
+.meet-image {
+  height: auto;
+  max-height: 100%;
+  width: 10px;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.size-pic {
+  width: 100%;
+  border-radius: 15px;
+}
+
+
 #image-meeting img{
 
 
   margin: auto;
-  border-radius: 50%;
-  height: 130px;
+  width: 380px;
 
-  border: solid 7px rgba(0, 204, 188, 1);
+  margin: 20px -17px;
+  margin-top: -26px;
+
+}
 
 
-
+.color-user {
+  color: pink;
 }
 
 .congratulations h1{
@@ -29,13 +48,21 @@ text-align: center;
 
 .meeting-details {
 margin: 10px -22px;
-font-size: 15px;
+font-size: 17px;
 font: avenir;
 padding: 10px 25px;
-border-radius: 5px;
+position: absolute;
 border-style: solid;
-border-color: #52C0EC;
 border-width: thin;
+border-color: grey;
+top: 549px;
+
+
+
+
+
+background: white;
+
 }
 
 
@@ -54,18 +81,14 @@ border-width: thin;
   border-radius: 20px;
   padding: 10px;
   opacity: 0.8px;
-  font: avenir;
-}
-
-.banner-meeting {
-  background-image: url("http://hd-wallpapersfd.info/wp-content/uploads/HTML/Ambient-Backgrounds/Ambient-Backgrounds6.jpg");
-  background-size: cover;
-  background-position: -498px -16px;
-  height: 480px;
-
-
+  font-family: avenir;
+  position: absolute;
+  top: 5px;
 
 }
+
+
+
 
 layer {
  background-color: rgba(0, 0, 0, 0.7);
@@ -103,7 +126,7 @@ layer {
    align-items: center;
 margin-top: -225px;
 margin-bottom: 1px;
-
+position: relative;
 
 }
 
@@ -157,3 +180,64 @@ margin-bottom: 1px;
 .background-chat {
 
 }
+
+#map {
+position: absolute;
+top: 712px;
+left: -17px;
+}
+
+
+
+.tab-1 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-1 button {
+  background-color: #52C0EC;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 34px;
+  transition: 0.3s;
+  font-size: 25px;
+  margin-left: 3px;
+  margin-right: 0px;
+  padding-right: 45px;
+  font-family: avenir;
+  color: white;
+  border-radius: 10px;
+}
+
+.message-button {
+  margin-left: 12px;
+}
+
+
+.map-button button {
+  margin-left: 10px;
+  padding-right: 65px;
+  padding-left: 57px;
+}
+
+/* Change background color of buttons on hover */
+.tab-1 button:hover {
+  background-color: #2e94bd;
+}
+
+/* Create an active/current tablink class */
+.tab-1 button.active {
+  background-color: #0b7ca9;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+
+  border-top: none;
+}
+
