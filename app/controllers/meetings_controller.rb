@@ -12,6 +12,7 @@ class MeetingsController < ApplicationController
 
   def index
     @meetings = current_user.meetings
+    @requests = current_user.requests
     # @meetings = Meeting.joins(:chooser_request, :chosen_request).where(requests: { user_id: current_user.id })
   end
 
