@@ -13,11 +13,8 @@ puts "succesfully destroyed records"
 
 
 cuisine_italian = Cuisine.create!(name: "italian")
-
-
-
-
-
+cuisine_indian = Cuisine.create!(name: "indian")
+cuisine_japanese = Cuisine.create!(name: "japanese")
 Restaurant.create!(name: "Blabla", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
 
 

@@ -5,7 +5,15 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.meeting = @meeting
     if @message.save
-      redirect_to meeting_path(params[:meeting_id])
+      respond_to do |format|
+        format.html { redirect_to meeting_path(@meeting) }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render 'meetings/show' }
+        format.js
+      end
     end
   end
 

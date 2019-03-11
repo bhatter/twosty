@@ -1,15 +1,38 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+<div class="full-screen">
 
-    <h2> Create a new request </h2>
+<div class="parallax">
 
+<div class="section color-change">
+<section id="section_one">
+  <div class="container">
+    <div class="row product-title-info">
+      <div class="col-md-12">
+        <h2> Create a new request </h2>
+        <%= simple_form_for(@request) do |f| %>
+        <%= f.input :location , label: false, placeholder: "Location", input_html: { id: "location" } %>
+        <%= image_tag "arrow.svg", class: "ct-btn-scroll", id: "first_scroll_btn" %>
 
-    <%= simple_form_for(@request) do |f| %>
-      <%= f.input :location, input_html: { id: "location" } %>
-      <%= f.association :cuisine, as: :radio_buttons %>
-      <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-
-      <%= f.submit "Select your Meal Preference", class: "btn btn-success" %>
-    <% end %>
+      </div>
+    </div>
   </div>
+</section>
+
+<section id="section_two">
+  <div class="container">
+   <%= f.association :cuisine, as: :radio_buttons %>
+   <%= image_tag "arrow.svg", class: "ct-btn-scroll", id: "second_scroll_btn" %>
+ </div>
+
+
+</section>
+<section id="section_tree">
+  <div class="container">
+    <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.submit "Look for a Match", class: "btn btn-success" %>
+  <% end %>
+  </div>
+</section>
+</div>
+</div>
+
 </div>
