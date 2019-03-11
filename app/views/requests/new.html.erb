@@ -11,8 +11,10 @@
     </div>
     <div class="section" style="margin-bottom: 70px">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
-      <%= f.association :cuisine, as: :radio_buttons %>
-      <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
+      <div id="cuisine-list">
+        <%= f.association :cuisine, as: :radio_buttons %>
+      </div>
+        <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
     </div>
     <div class="section" style="margin-bottom: 140px">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
