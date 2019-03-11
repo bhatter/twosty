@@ -20,10 +20,9 @@
                   <%= matched_request.user.age %>
               </div>
               <div class="match-index-card-text-restaurant">
-                <p> <%= matched_request.restaurant.name %>
+                ` <h1><%= matched_request.restaurant.name %></h1>
                   <br>
-                  <%= matched_request.restaurant.address %>
-                </p>
+                  <p> <%= matched_request.restaurant.address %></p>
               </div>
             <% end %>
           </div>
@@ -42,29 +41,40 @@
   </div>
 
   <div class="match-index-or">
-    <h2> Didn't find a match? Let someone choose you!</h2>
-    <br>
-    <br>
+    <h2> Didn't find a match?</h2>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-  <% @restaurants.each do |restaurant| %>
-  <div class="match-index-card-rest">
-   <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
-      <div class="match-index-card-picture", style = "background-image: url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg')">
-      </div>
+  <div id="RestCarousel" class="carousel slide" data-ride="true" data-interval="false">
+    <div class="carousel-inner">
+      <% @restaurants.each_with_index do |restaurant, index| %>
+        <div class="carousel-item <%= "active" if index == 0 %>" >
+          <div class="link">
+            <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
+              <div class="match-index-card-picture">
+                <%= cl_image_tag restaurant.photo.url, class: "cl-photo" %>
+              </div>
+              <div class="match-index-card-text-restaurant">
+                ` <h1><%= restaurant.name %></h1>
+                  <br>
+                  <p> <%= restaurant.address %></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
 
-      <div class="match-index-card-text-restaurant-chosen">
-        <p>
-          <%= restaurant.name %>
-          <br>
-          <%= restaurant.address %>
-          <%# if restaurant.user.photo&.url %>
-            <%#= cl_image_tag(restaurant.photo.url, :width=>250, :height=>250, :crop=>"fill") %>
-          <%# end %>
-        </p>
-
-      </div>
-    <% end %>
+    <a class="carousel-control-prev" href="#RestCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#RestCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
   </div>
-  <% end %>
-</div>

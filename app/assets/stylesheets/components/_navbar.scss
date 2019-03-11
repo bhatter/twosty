@@ -43,7 +43,7 @@ a {
   position: fixed;
   left: -100%;
   top: 0px;
-  bottom: 0;
+  bottom: 0px;
   transition: all 0.5s ease;
   z-index: 1;
   text-align: center;
@@ -82,6 +82,17 @@ a {
 .navbar-item {
   cursor: pointer;
   padding: 0 20px;
+}
+
+#location {
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  // color: white;
+  border-bottom: 3px solid white;
+  position: fixed;
+  margin: 40px 0px;
 }
 
 
