@@ -1,24 +1,14 @@
 <!-- #{@meeting.other_user_request(current_user).user.first_name}
 <%= current_user.first_name %>
 -->
-
-
-
-   <div id ="image-meeting">
-    <%= cl_image_tag @meeting.other_user_request(current_user).user.photo.url %>
-    </div>
-    <div class ="meeting-details">
-      <p>Meet <%= @meeting.other_user_request(current_user).user.first_name %><%= @meeting.other_user_request(current_user).meeting_date %><%= @restaurant.name %><%= @restaurant.address%></p>
-    </div>
-
-
-<!--
-      <div>
-        <%= link_to "Send message", "#messages", class: "btn btn-primary, button-chat" %>
-      </div>
--->
-
-
+<div id ="image-meeting">
+  <%= cl_image_tag @meeting.other_user_request(current_user).user.photo.url, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill"%>
+</div>
+<div class ="meeting-details">
+  <p class="meet">Meet <strong><span class="colorful-name"> <%= @meeting.other_user_request(current_user).user.first_name %></span></span></strong> on <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
+  <p class="place">at <%= @restaurant.name %>,</p>
+  <p class="where"> <%= @restaurant.address%></p>
+</div>
 <div class="tab-1">
   <div class="message-button">
     <button class="tablinks" onclick="openPage(event, 'container-chat')" id="defaultOpen">Message</button>
@@ -28,29 +18,35 @@
   </div>
 </div>
 <div id="map" class="tabcontent"
-    style="width: 340px;
+    style="
     height: 273px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-  <div id="container-chat" class="tabcontent">
-    <div class="background-chat">
-      <div id="messages">
-        <% @meeting.messages.each do |message| %>
-        <div class="chat <%= message.user == current_user ? "user_one" : "user_two" %>, user_one">
-          <%= message.user.first_name %>: <%= message.content %>
+<div id="container-chat" class="tabcontent">
+  <div class="background-chat">
+    <div id="messages">
+      <% @meeting.messages.each do |message| %>
+      <div class="chat <%= message.user == current_user ? "user_one" : "user_two" %>">
+        <div class="chat-content">
+           <%= message.user.first_name %>: <%= message.content %>
         </div>
-        <% end %>
+
       </div>
-    </div>
-    <h3 class="typing"> <%=  %></h3>
-      <%= simple_form_for [@meeting, @message] do |f| %>
-    <div class="chat-enter">
-      <%= f.input :content, placeholder: "Say something", class: "say", label: false %>
-      <%= f.submit class: "btn btn-primary"%>
       <% end %>
     </div>
-
+  </div>
+  <h3 class="typing"> <%=  %></h3>
+    <%= simple_form_for [@meeting, @message] do |f| %>
+  <div class="chat-enter">
+    <div class="input-chat">
+      <%= f.input :content, placeholder: "Say something", class: "form-control say", label: false %>
+    </div>
+    <div >
+      <%= f.submit class: "btn btn-primary", value: "Send"%>
+      <% end %>
+    </div>
+  </div>
 
 
 
