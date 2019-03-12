@@ -5,20 +5,24 @@
       <br>
       <br>
       <h3> Where would you like to meet? </h3>
-
-      <%= f.input :location , label: false, placeholder: "Location", input_html: { id: "location" } %>
+      <div class="algolia">
+        <%= f.input :location , label: false, placeholder: "Location", input_html: { id: "location" } %>
+      </div>
       <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
     </div>
     <div class="section" style="margin-bottom: 70px">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
+      <h3 class="cuisine-word"> Cuisine </h3>
       <div id="cuisine-list">
-        <%= f.association :cuisine, as: :radio_buttons %>
+        <%= f.association :cuisine, as: :radio_buttons, label: "", required: false %>
       </div>
         <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
     </div>
     <div class="section" style="margin-bottom: 140px">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
+        <div class="when-to-meet">
       <%= f.input :meeting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        </div>
       <%= f.submit "Look for a Match", class: "btn btn-success" %>
 
     </div>

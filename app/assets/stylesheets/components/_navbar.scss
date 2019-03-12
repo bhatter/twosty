@@ -81,10 +81,23 @@ a {
   border-top: none;
   border-right: none;
   border-left: none;
-  // color: white;
+  color: white;
   border-bottom: 3px solid white;
   position: fixed;
   margin: 40px 0px;
+  &::placeholder {
+    color: white;
+    opacity: 1;
+
+  }
+
+}
+
+
+
+
+.font-city{
+  font-size: 50px;
 }
 
 ol, ul, dl {
