@@ -24,13 +24,16 @@ class RequestsController < ApplicationController
     @requests = Request.where(user: current_user)
   end
 
+  def destroy
+    @request = Request.find(params[:id])
+    @request.destroy
+    redirect_to meetings_path
+  end
+
   private
 
   def request_params
     params.require(:request).permit(:location, :meeting_date, :cuisine_id)
   end
-
-
 end
-
 
