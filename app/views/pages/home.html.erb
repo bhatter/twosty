@@ -1,16 +1,16 @@
 <div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1549267419-dd7877f9ea02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
   <div class="parallax">
-    <div class="section">
-      <h1>Why eat out alone when you can..</h1>
-      <br>
-      <h1>Twosty</h1>
-      <%= link_to "Get Started", new_request_path, class: "btn btn-success text-center btn-home"%>
-      <div>
+    <div id='section-a' class="section">
+      <h1>Meet People, Simply, With Twosty</h1>
+      <p>Match and eat with great people, quivkly and without hassle.</p>
+      <h1></h1>
+      <%= link_to "Find A Match", new_request_path, class: "btn btn-success text-center btn-home"%>
+      <div class="hit-btn">
       <p>How it works</p>
       <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
       </div>
     </div>
-    <div class="section">
+    <div id="section-b" class="section">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
       <h2>How it works<br></h2>
         <ul class="list-unstyled">
@@ -26,7 +26,7 @@
           <li> <i class="glyphicon glyphicon-ok-sign"></i> Choose a match</li>
         </ul>
         <%= link_to "Get Started", new_request_path, class: "btn btn-success text-center btn-home"%>
-      <h4>Enjoy your date!</h2>
+      <h2></h2>
     </div>
   </div>
 </div>
