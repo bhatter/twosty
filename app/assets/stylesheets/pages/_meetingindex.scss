@@ -5,6 +5,9 @@ $grey: #909090;
 $light-grey: #dadada;
 $turquoise: #78D9C5;
 $pink: #fc3768;
+$blue: #52C0EC;
+$red: #ED393A;
+$yellow: #FFAD05;
 
 // html,
 // body {
@@ -90,6 +93,12 @@ a {
 }
 
 
+
+.nav-link {
+  &:active {
+    background-color: #ED393A;
+  }
+}
 
 .color-layer {
   background-color: rgba(107, 23, 102, 0.5);
@@ -266,20 +275,21 @@ a {
   .name{
     color: #ED393A;
     font-weight: 1500;
+    font-size: 18px;
   }
 }
 
 .time{
   color: $grey;
   font-weight: 200;
-  font-size: 28px;
+  font-size: 24px;
   display: block;
   margin-top: 10px;
 }
 
 .address{
   color: $grey;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 18px;
 }
 
