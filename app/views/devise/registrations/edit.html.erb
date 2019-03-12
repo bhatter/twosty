@@ -1,51 +1,49 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <div class="edit-form">
-        <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= f.error_notification %>
-
-          <div class="form-inputs">
-            <%= f.input :email, required: true, autofocus: true %>
-
-            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-            <% end %>
-
-            <%= f.input :password,
-                        hint: "leave it blank if you don't want to change it",
-                        required: false,
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        required: false,
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :current_password,
-                        hint: "we need your current password to confirm your changes",
-                        required: true,
-                        input_html: { autocomplete: "current-password" } %>
-            <%= f.input :first_name %>
-            <%= f.input :last_name %>
-            <%= f.input :date_of_birth %>
-            <%= f.input :gender, :as => :radio_buttons, :collection => User.genders.keys %>
-            <%= f.input :photo  %>
-            <%= f.input :age_preference_from %>
-            <%= f.input :age_preference_to %>
-            <%= f.input :gender_preference, :as => :radio_buttons, :collection => User.gender_preferences.keys %>
-          </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Update", class: "btn" %>
-          </div>
+<div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1499721297526-536718e770ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+  <div class="parallax">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="section">
+      <br>
+      <h2>Edit <%= resource_name.to_s.humanize %></h2>
+      <br>
+      <br>
+      <%= f.error_notification %>
+      <!-- <div class="form-inputs"> -->
+        <%= f.input :email, required: true, autofocus: true %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
+        <%= f.input :password,
+        hint: "leave it blank if you don't want to change it",
+        required: false,
+        input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+        required: false,
+        input_html: { autocomplete: "new-password" } %>
+        <%= f.input :current_password,
+        hint: "we need your current password to confirm your changes",
+        required: true,
+        input_html: { autocomplete: "current-password" } %>
+        <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
+      </div>
+      <div class="section" style="margin-bottom: 70px">
+        <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :date_of_birth %>
+        <%= f.input :gender, :as => :radio_buttons, :collection => User.genders.keys %>
+        <%= f.input :photo  %>
+        <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
+      </div>
+      <div class="section" style="margin-bottom: 140px">
+        <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
 
-        <h3>Cancel my account</h3>
-
+        <%= f.input :age_preference_from %>
+        <%= f.input :age_preference_to %>
+        <%= f.input :gender_preference, :as => :radio_buttons, :collection => User.gender_preferences.keys %>
+        <%= f.button :submit, "Update", class: "btn btn-success" %>
+        <% end %>
         <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
         <%= link_to "Back", :back %>
       </div>
     </div>
   </div>
-</div>
