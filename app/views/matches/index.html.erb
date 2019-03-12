@@ -3,7 +3,7 @@
     <br>
     <br>
     <br>
-    <h1 >Choose your date!</h1>
+    <h1 >Choose your date</h1>
   </div>
 
   <div id="MagicCarousel" class="carousel slide" data-ride="true" data-interval="false">
@@ -20,9 +20,9 @@
                   <%= matched_request.user.age %>
               </div>
               <div class="match-index-card-text-restaurant">
-                ` <h1><%= matched_request.restaurant.name %></h1>
+                ` <h1><%= matched_request.restaurant&.name %></h1>
                   <br>
-                  <p> <%= matched_request.restaurant.address %></p>
+                  <p> <%= matched_request.restaurant&.address %></p>
               </div>
             <% end %>
           </div>
