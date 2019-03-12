@@ -11,7 +11,7 @@
 </div>
 <div class="tab-1">
   <div class="message-button">
-    <button class="tablinks" onclick="openPage(event, 'container-chat')" id="defaultOpen">Message</button>
+    <button class="tablinks active " onclick="openPage(event, 'container-chat')" id="defaultOpen">Message</button>
   </div>
   <div class="map-button">
     <button class="tablinks" onclick="openPage(event, 'map')" >Map</button>
@@ -23,13 +23,13 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-<div id="container-chat" class="tabcontent">
+<div id="container-chat" class="tabcontent" style="display: block;">
   <div class="background-chat">
     <div id="messages">
       <% @meeting.messages.each do |message| %>
       <div class="chat <%= message.user == current_user ? "user_one" : "user_two" %>">
         <div class="chat-content">
-           <%= message.user.first_name %>: <%= message.content %>
+           <%# message.user.first_name %> <%= message.content %>
         </div>
 
       </div>
@@ -37,13 +37,13 @@
     </div>
   </div>
   <h3 class="typing"> <%=  %></h3>
-    <%= simple_form_for [@meeting, @message] do |f| %>
+    <%= simple_form_for [@meeting, @message], remote: true do |f| %>
   <div class="chat-enter">
     <div class="input-chat">
       <%= f.input :content, placeholder: "Say something", class: "form-control say", label: false %>
     </div>
     <div >
-      <%= f.submit class: "btn btn-primary", value: "Send"%>
+      <%= f.submit class: "btn btn-primary aaa", value: "Send"%>
       <% end %>
     </div>
   </div>

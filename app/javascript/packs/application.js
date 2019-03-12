@@ -10,6 +10,6 @@ import { scroll } from '../components/scroll';
 initMapbox();
 initAutocomplete();
 sidebarToggle();
-openPage();
-// document.getElementById("defaultOpen").click();
+//openPage();
+//document.getElementById("defaultOpen").click();
 scroll();
