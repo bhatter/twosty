@@ -12,15 +12,6 @@ a {
   color: white;
 }
 
-.btn-new {
-  border-radius: 3px;
-  background-color: white;
-  box-shadow: 1px 1px 9px 0px #4747474d;
-  width: 57%;
-  margin: auto;
-}
-
-
 .profile-menu {
   height: 300px;
   a {
@@ -53,6 +44,7 @@ a {
   color: white !important;
   font-size: 30px;
   font-weight: bold;
+  background-image: linear-gradient(400deg,teal 12%, #32B796 60%);
   li {
     &:hover {
       color: blue;
@@ -95,5 +87,6 @@ a {
   margin: 40px 0px;
 }
 
-
-
+ol, ul, dl {
+  padding-left: 0px;
+}
