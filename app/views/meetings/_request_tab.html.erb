@@ -1,0 +1,12 @@
+<div class="entry-container">
+  <div class="entry">
+    <%= cl_image_tag request&.restaurant&.photo&.url, class: "d-inline" %>
+    <div class="text d-inline">
+      <div>
+        <span class="time"><%= request.meeting_date.strftime("%A, %b %d") %> at
+          <span class="name text d-inline"> </span> <%= request&.restaurant&.name %> </span>
+          <span class="address text d-inline"> <%= request&.restaurant&.address %></span>
+        </div>
+      </div>
+    </div>
+  </div>

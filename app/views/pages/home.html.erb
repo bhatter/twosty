@@ -12,15 +12,18 @@
     </div>
     <div class="section">
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
-      <h2>How it works<br></h3>
+      <h2>How it works<br></h2>
         <ul class="list-unstyled">
           <br>
           <br>
-          <li> <i class="glyphicon glyphicon-log-in"></i>  Create your Profile to select your Gender and Age preferences</li>
+          <i class="fas fa-user-plus"></i>
+          <li> <i class="glyphicon glyphicon-log-in"></i>  Create your profile</li>
           <br>
-          <li> <i class="glyphicon glyphicon-ok-circle"></i>  Select a Location, a Date and Choose your favorite Cuisine</li>
+          <i class="fas fa-edit"></i>
+          <li> <i class="glyphicon glyphicon-ok-circle"></i> Fill in your preferences </li>
           <br>
-          <li> <i class="glyphicon glyphicon-ok-sign"></i>  Select a Match and a Restaurant</li>
+          <i class="far fa-hand-pointer"></i>
+          <li> <i class="glyphicon glyphicon-ok-sign"></i> Choose a match</li>
         </ul>
         <%= link_to "Get Started", new_request_path, class: "btn btn-success text-center btn-home"%>
       <h4>Enjoy your date!</h2>
