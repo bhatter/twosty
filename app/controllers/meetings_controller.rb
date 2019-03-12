@@ -11,8 +11,12 @@ class MeetingsController < ApplicationController
   end
 
   def index
-    @meetings = current_user.meetings
-    @requests = current_user.requests
+    meetings = current_user.meetings
+    @future_requests = current_user.requests
+                                   .where("meeting_date >= '#{Date.current}'")
+                                   .includes(:restaurant)
+    @past_meetings = meetings.where("meeting_date < '#{Date.current}'")
+    @future_meetings = meetings.where("meeting_date >= '#{Date.current}'")
     # @meetings = Meeting.joins(:chooser_request, :chosen_request).where(requests: { user_id: current_user.id })
   end
 
