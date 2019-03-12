@@ -1,13 +1,13 @@
 <div class="entry-container">
   <div class="entry">
-    <%= cl_image_tag request&.restaurant&.photo&.url, :width=>250, :fetch_format=>:auto, :crop=>"scale"%>
+    <%= cl_image_tag request&.restaurant&.photo&.url, :width=>110, :fetch_format=>:auto, :crop=>"scale"%>
     <div class="text d-inline">
       <div>
         <span class="time"><%= request.meeting_date.strftime("%A, %b %d") %> at
           <span class="title"> </span> <%= request&.restaurant&.name %> </span>
           <span class="address"> <%= request&.restaurant&.address %></span>
-          <%= link_to "Delete your request", request_path(request), method: :delete %>
         </div>
+        <%= link_to "Cancel request", request_path(request), method: :delete %>
       </div>
     </div>
   </div>
