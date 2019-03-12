@@ -1,6 +1,7 @@
 <% other_user = meeting.other_user(current_user) %>
 <% other_request = meeting.other_user_request(current_user) %>
 
+<%= if other_user && other_request %>
 <div class="entry-container">
   <div class="entry">
     <% if other_user&.photo&.url %>
@@ -15,3 +16,4 @@
     </div>
   </div>
 </div>
+<% end %>
