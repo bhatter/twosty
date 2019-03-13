@@ -6,12 +6,12 @@
 <div class="entry-container">
   <div class="entry">
     <% if other_user&.photo&.url %>
-    <%= cl_image_tag other_user.photo.url(:find_face_small), class: "profile-face text d-inline" %>
+    <%= cl_image_tag other_user.photo.url(:find_face_small), class: "profile-face d-inline" %>
     <% end %>
     <div class="text d-inline">
-      <span class="time text d-inline"><%= other_request.meeting_date.strftime("%A, %b %d") %> </span>
+      <span class="time d-inline"><%= other_request.meeting_date.strftime("%A, %b %d") %> </span>
       <div>
-        <span class="title text d-inline">Meet <span class="name text d-inline"><%= other_user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
+        <span class="title d-inline">Meet <span class="name d-inline"><%= other_user.first_name %> </span> at <%= meeting.restaurant.name %> </span>
         <span class="address"> <%= meeting.restaurant.address %></span>
       </div>
     </div>
