@@ -13,7 +13,6 @@ class MatchesController < ApplicationController
   private
 
   def match_requests(request)
-    parsed_requests = []
     requests = Request.where(location: request.location, meeting_date: request.meeting_date, cuisine: request.cuisine, meeting_id: nil).where.not(user: current_user).
       where.not(restaurant: [nil, ""])
     requests.joins(:user)
