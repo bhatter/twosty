@@ -137,6 +137,7 @@ saporito = Restaurant.new(name: "Saporito", address: "Straßmannstraße 21, 1024
 saporito.remote_photo_url = urlr23
 saporito.save!
 
+
 urlr24 = "https://images.pexels.com/photos/3498/italian-pizza-restaurant-italy.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 pomodorino = Restaurant.new(name: "Pomodorino", address: "Mühsamstraße 29, 10249 Berlin", cuisine_id: cuisine_italian.id)
 pomodorino.remote_photo_url = urlr24
@@ -147,6 +148,8 @@ urlr25 = "https://images.pexels.com/photos/750071/pexels-photo-750071.jpeg?auto=
 papaleo = Restaurant.new(name: "Papaleo", address: "Bänschstraße 67, 10247 Berlin", cuisine_id: cuisine_italian.id)
 papaleo.remote_photo_url = urlr25
 papaleo.save!
+
+
 
 
 
@@ -216,7 +219,7 @@ stacey.remote_photo_url = url13
 stacey.save!
 
 url15 ="https://images.unsplash.com/photo-1504911539020-cfb0f7887a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1995-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1998-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 tiffany.remote_photo_url = url15
 tiffany.save!
 
@@ -240,14 +243,13 @@ lisa = User.new(email: "lisa@gmail.com", first_name: "Lisa", last_name: "Bonet",
 lisa.remote_photo_url = url19
 lisa.save!
 
-url20 ="https://www.lidl-kochen.de/var/lidl-recipes/storage/images/7/9/4/8/2188497-1-ger-DE/One-Pot-Pasta-mit-zweierlei-Tomaten-und-Oliven.jpg"
-andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1991-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-andrea.remote_photo_url = url20
-andrea.save!
 
 
-url21 ="https://images.pexels.com/photos/713312/pexels-photo-713312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-andrea = User.new(email: "lin@gmail.com", first_name: "lin", last_name: "Nguyen", gender: "female", date_of_birth: "1992-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+
+
+
+url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
+andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1965-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
 

@@ -12,6 +12,10 @@ $teal: #32B796;
 
 
 /* overwriting bootstrap line 81, node_modules/bootstrap/scss/_nav.scss */
+#pills-tab {
+  margin-bottom: 0 !important;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
@@ -58,7 +62,7 @@ a {
   height: 33vh;
   // background: url(https://images.unsplash.com/photo-1519307212971-dd9561667ffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaW);
 
-  background: url(https://unsplash.it/1080/720/?random) no-repeat;
+  background: url(https://images.unsplash.com/photo-1529771790449-1dcf5f520017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) no-repeat;
   background-size: cover;
   width: 100vw;
   color: $white;
@@ -91,7 +95,7 @@ a1 {
 
 .nav-link {
   &:active {
-    background-color: #ED393A;
+    // background-color: #ED393A;
   }
 }
 

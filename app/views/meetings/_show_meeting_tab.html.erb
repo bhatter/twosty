@@ -1,3 +1,20 @@
+<div class="entry-container">
+  <div class="entry">
+    <div class="restaurant-image-request" style="background-image: url('<%= cl_image_path @restaurant&.photo&.url %>')">
+    </div>
+    <div class="text d-inline">
+      <div>
+        <span class="time"><%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> at
+          <span class="title"> </span> <%= @restaurant.name %> </span>
+          <span class="address"> <%= @restaurant.address%></span>
+        </div>
 
-     <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
-     <p class="title"><%= @restaurant.name %> <br> <%= @restaurant.address%></p>
+      </div>
+
+    </div>
+    <div class="text-center">
+    <%= link_to "All meetings", meetings_path %>
+    </div>
+  </div>
+
+
