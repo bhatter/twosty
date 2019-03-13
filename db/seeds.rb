@@ -16,12 +16,12 @@ cuisine_italian = Cuisine.create!(name: "italian")
 cuisine_indian = Cuisine.create!(name: "indian")
 cuisine_japanese = Cuisine.create!(name: "japanese")
 cuisine_french = Cuisine.create!(name: "french")
-cuisine_german_ = Cuisine.create!(name: "german")
+cuisine_german = Cuisine.create!(name: "german")
 cuisine_mexican = Cuisine.create!(name: "mexican")
 
 
 urlr1 = "https://images.unsplash.com/photo-1549400405-810ac18d73b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"
-piccola = Restaurant.new(name: "Piccola", address: "Ilsenburger Straße 40, 10589 Berlin", cuisine_id: cuisine_italian.id)
+piccola = Restaurant.new(name: "La Piccola", address: "Ritterstraße 60B, 10969 Berlin", cuisine_id: cuisine_italian.id)
 piccola.remote_photo_url = urlr1
 piccola.save!
 
@@ -29,6 +29,100 @@ urlr2 = "https://images.unsplash.com/photo-1543807669-0d0730e95cb3?ixlib=rb-1.2.
 vapiano = Restaurant.new(name: "Vapiano", address: "Friedrichstraße 50-55, 10117 Berlin", cuisine_id: cuisine_italian.id)
 vapiano.remote_photo_url = urlr2
 vapiano.save!
+
+
+urlr3 = "http://www.arbanashkihan.com/wp-content/uploads/2018/05/small-FUJ29895-1.jpg"
+calibocca = Restaurant.new(name: "CaliBocca", address: "Schlüterstraße 30, 10629 Berlin", cuisine_id: cuisine_italian.id)
+calibocca.remote_photo_url = urlr3
+calibocca.save!
+
+urlr4 = "https://img.taste.com.au/TRoLTh6r/taste/2016/11/pork-and-beef-ragu-with-spaghetti-95474-1.jpeg"
+cuore_di_vetro = Restaurant.new(name: "Cuore Vetro", address: "Max-Beer-Straße 33, 10119 Berlin", cuisine_id: cuisine_italian.id)
+cuore_di_vetro.remote_photo_url = urlr4
+cuore_di_vetro.save!
+
+urlr5 = "https://images.pexels.com/photos/1179803/pexels-photo-1179803.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+amrit = Restaurant.new(name: "Amrit", address: "Ebertstraße 14, 10117 Berlin", cuisine_id: cuisine_indian.id)
+amrit.remote_photo_url = urlr5
+amrit.save!
+
+urlr6 = "https://images.pexels.com/photos/461326/pexels-photo-461326.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+delhi_6 = Restaurant.new(name: "Delhi 6", address: "Friedrichstraße 237, 10969 Berlin", cuisine_id: cuisine_indian.id)
+delhi_6.remote_photo_url = urlr6
+delhi_6.save!
+
+
+urlr7 = "https://static1.squarespace.com/static/5b280045697a98dfbc04cef4/t/5b282a4daa4a99350be2e863/1551124278704/saffron+valley+sugarhouse+Indian+food+Saffron+Bistro"
+swera = Restaurant.new(name: "Swera", address: "Bergmannstraße 103, 10961 Berlin", cuisine_id: cuisine_indian.id)
+swera.remote_photo_url = urlr7
+swera.save!
+
+urlr8 = "https://images.unsplash.com/photo-1540713304937-18ad930d3594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+izumi = Restaurant.new(name: "Izumi", address: "Kronenstraße 66, 10117 Berlin", cuisine_id: cuisine_japanese.id)
+izumi.remote_photo_url = urlr8
+izumi.save!
+
+urlr9 = "https://www.ahstatic.com/photos/5931_rsr003_00_p_1024x768.jpg"
+sakura_2 = Restaurant.new(name: "Sakura II", address: "Kaiserdamm 32, 14057 Berlin", cuisine_id: cuisine_japanese.id)
+sakura_2.remote_photo_url = urlr9
+sakura_2.save!
+
+urlr10 = "https://images.unsplash.com/photo-1515668236457-83c3b8764839?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+cocolo = Restaurant.new(name: "Cocolo", address: "Gipsstr. 3, in 10119 Berlin", cuisine_id: cuisine_japanese.id)
+cocolo.remote_photo_url = urlr10
+cocolo.save!
+
+urlr11 = "https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+poulette = Restaurant.new(name: "Poulette", address: "Knaackstraße 30-32, 10405 Berlin", cuisine_id: cuisine_french.id)
+poulette.remote_photo_url = urlr11
+poulette.save!
+
+urlr12 = "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+fabourg = Restaurant.new(name: "Faubourg", address: "Augsburger Str. 41, 10789 Berlin", cuisine_id: cuisine_french.id)
+fabourg.remote_photo_url = urlr12
+fabourg.save!
+
+urlr13 = "https://www.paradisoinsurance.com/wp-content/uploads/2018/01/tableware-at-restaurant.jpg"
+lumieres = Restaurant.new(name: "Lumières", address: "Potsdamer Straße 102, 10785 Berlin", cuisine_id: cuisine_french.id)
+lumieres.remote_photo_url = urlr13
+lumieres.save!
+
+urlr14 = "https://mein.hofer.at/medias/RZP-R-Schnitzel-mit-Pommes-frites-und-Thai-Curry-Gewuerzsalz-RZ023286-RecipeImage-647x465?context=bWFzdGVyfGltYWdlc3w3NDQxMjB8aW1hZ2UvcG5nfGltYWdlcy9oODkvaDE1Lzg5NTExNzIzMDA4MzAucG5nfDdkMjA2MjU3MGFkYjQzNzRiYzEwMDhhMWYzYzgwZjRmMmY4OWUxNmQ1OTdhYTM0OTc0ZDc0M2JhZjI2ZDMxYjc"
+schnitzelei = Restaurant.new(name: "Schnitzeli", address: "Chausseestraße 8, 10115 Berlin", cuisine_id: cuisine_german.id)
+schnitzelei.remote_photo_url = urlr14
+schnitzelei.save!
+
+urlr15 = "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+gendarmarie = Restaurant.new(name: "Gendamarie", address: "Behrenstraße 42, 10117 Berlin", cuisine_id: cuisine_german.id)
+gendarmarie.remote_photo_url = urlr15
+gendarmarie.save!
+
+urlr16 = "https://resizer.otstatic.com/v2/photos/huge/24943716.jpg"
+lemke = Restaurant.new(name: "Lemke", address: "Luisenplatz 1, 10585 Berlin", cuisine_id: cuisine_german.id)
+lemke.remote_photo_url = urlr16
+lemke.save!
+
+urlr17 = "https://img.taste.com.au/w_-0kcUJ/taste/2016/11/aussie-style-beef-and-salad-tacos-86525-1.jpeg"
+cancun = Restaurant.new(name: "Cancun", address: "Rathausstraße 5-13, 10178 Berlin", cuisine_id: cuisine_mexican.id)
+cancun.remote_photo_url = urlr17
+cancun.save!
+
+urlr18 = "http://www.quepasa-berlin.de/content/images/bg/bg_quepasa_home2.jpg"
+que_pasa = Restaurant.new(name: "Que Pasa", address: "Voxstraße 2, 10785 Berlin", cuisine_id: cuisine_mexican.id)
+que_pasa.remote_photo_url = urlr18
+que_pasa.save!
+
+urlr19 = "https://eu2prddennyscdnstr.blob.core.windows.net/cms/menu/product/zesty-nachos_thumbnaillarge_2017-05-29-13-36-51.jpg"
+que_pasa = Restaurant.new(name: "Lupita", address: "Bergmannstraße 11, 10961 Berlin", cuisine_id: cuisine_mexican.id)
+que_pasa.remote_photo_url = urlr19
+que_pasa.save!
+
+urlr20 = "http://ricetteindiane.it/image/data/12.jpg"
+shezan = Restaurant.new(name: "Shezan", address: "Neue Roßstraße 13, 10179 Berlin", cuisine_id: cuisine_indian.id)
+shezan.remote_photo_url = urlr20
+shezan.save!
+
+
 
 
 url1 ="https://images.unsplash.com/photo-1544098485-2a2ed6da40ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
