@@ -6,8 +6,9 @@ class MeetingsController < ApplicationController
     @restaurant = @request.restaurant
     @markers = [
       { lat: @restaurant.latitude,
-        lng: @restaurant.longitude }
-     ]
+        lng: @restaurant.longitude,
+     image_url: helpers.asset_url('map_marker.svg'),
+    }]
   end
 
   def index
