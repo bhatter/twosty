@@ -12,8 +12,7 @@
               <div class="carousel-item <%= "active" if index == 0 %>" >
                 <div class="link">
                   <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
-                  <div class="match-index-card-picture">
-                    <%= cl_image_tag matched_request.user.photo.url, class: "cl-photo" %>
+                  <div class="match-index-card-picture" style="background-image: url('<%= cl_image_path matched_request.user.photo.url %>')">
                   </div>
                   <div class="match-index-card-text-name">
                     <%= matched_request.user.first_name %>,

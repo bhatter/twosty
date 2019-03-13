@@ -1,8 +1,31 @@
-#image-meeting img {
+
+
+// .meet-image {
+//   height: auto;
+//   max-height: 100%;
+//   width: 10px;
+//   margin: 0px;
+//   padding: 0px;
+
+// }
+
+// .image-meeting {
+//   background-size: cover;
+//   background-position: center;
+// }
+
+#image-meeting {
   height: 494px;
   width: 376px;
+  background-size: cover;
+  background-position: center;
+
 }
 
+
+.color-user {
+  color: pink;
+}
 
 .meeting-details {
   margin: -3px 0px;

@@ -9,7 +9,7 @@
 }
 
 a {
-  color: #469adf;
+  color: white;
 }
 
 .profile-menu {
@@ -47,13 +47,18 @@ a {
   background-image: linear-gradient(400deg,teal 12%, #32B796 60%);
   li {
     &:hover {
-      color: blue;
+      color: red;
     }
 
   }
   a {
+    color: white;
     font-weight: 300;
     line-height: 4px;
+      &:hover {
+        text-decoration: none;
+        color: #ED4A4B;
+    }
   }
 }
 
@@ -63,6 +68,9 @@ a {
 
 .text-menu {
   text-align: center;
+  .li {
+    color: white;
+  }
 }
 
 #navbar-menu {
@@ -92,9 +100,6 @@ a {
   }
 
 }
-
-
-
 
 .font-city{
   font-size: 50px;

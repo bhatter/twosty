@@ -1,6 +1,6 @@
 <div class="entry-container">
   <div class="entry">
-    <%= cl_image_tag request&.restaurant&.photo&.url, :width=>110, :fetch_format=>:auto, :crop=>"scale"%>
+    <%= cl_image_tag request&.restaurant&.photo&.url, :width=>115, :fetch_format=>:auto, :crop=>"scale"%>
     <div class="text d-inline">
       <div>
         <span class="time"><%= request.meeting_date.strftime("%A, %b %d") %> at
@@ -11,3 +11,4 @@
       </div>
     </div>
   </div>
+8

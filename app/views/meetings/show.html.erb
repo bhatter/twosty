@@ -1,8 +1,7 @@
 <!-- #{@meeting.other_user_request(current_user).user.first_name}
 <%= current_user.first_name %>
 -->
-<div id ="image-meeting">
-  <%= cl_image_tag @meeting.other_user_request(current_user).user.photo.url, :width=>250, :height=>250, :gravity=>"faces", :crop=>"fill"%>
+<div id ="image-meeting" style="background-image: url('<%= cl_image_path @meeting.other_user_request(current_user).user.photo.url %>')">
 </div>
 <div class ="meeting-details">
   <p class="meet">Meet <strong><span class="colorful-name"> <%= @meeting.other_user_request(current_user).user.first_name %></span></strong> on <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
