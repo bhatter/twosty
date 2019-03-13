@@ -28,7 +28,7 @@
       <% @meeting.messages.each do |message| %>
       <div class="chat <%= message.user == current_user ? "user_one" : "user_two" %>">
         <div class="chat-content">
-           <%# message.user.first_name %> <%= message.content %>
+           <%= message.content %>
         </div>
 
       </div>
@@ -40,7 +40,7 @@
   <%= simple_form_for [@meeting, @message], remote: true do |f| %>
 <div class="chat-enter">
   <div class="input-chat">
-    <%= f.input :content, placeholder: "Say something", class: "form-control say", label: false %>
+    <%= f.input :content, placeholder: "Type your message", class: "form-control say", label: false %>
   </div>
   <div >
     <%= f.submit class: "btn btn-primary aaa", value: "Send"%>
