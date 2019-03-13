@@ -73,26 +73,19 @@
 
 
 .button-chat {
-  background-color: #FF4070;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  opacity: 0.8px;
-  font-family: avenir;
-  position: absolute;
-  top: 5px;
-
+  width: 90px;
 }
 
 
 #messages {
   margin-top: 0px;
-  height: 300px;
+  // height: 300px;
   overflow: auto;
   background: #e0e0e0;
   margin-left: -13px;
   margin-bottom: 10px;
   margin-right: 0px;
+  padding-bottom: 100px;
 
 }
 
@@ -107,7 +100,7 @@ margin: 5px;
 }
 
 .tab-1 button {
-  background-color: #52C0EC;
+  background-color: #32B796;
   float: left;
   border: none;
   outline: none;
@@ -123,11 +116,11 @@ margin: 5px;
 }
 
 .tab-1 button:hover {
-  background-color: #2e94bd;
+  background-color: #32B796;
 }
 
 .tab-1 button.active {
-  background-color: #0b7ca9;
+  background-color: #32B796
 }
 
 
@@ -182,13 +175,25 @@ margin: 5px;
   }
 }
 
+
+
 .chat-enter {
+    position: fixed;
+    bottom: 0;
+    background: white;
+    width: 100%;
   input {
 
     height: 62px;
     border-radius: 14px;
     margin-right: 10px;
   }
+  .form-group {
+    margin-bottom: 0;
+
+  }
+  align-items: center;
+  padding: 10px 0px;
   display: flex;
   justify-content: space-around;
 }
