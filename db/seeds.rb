@@ -122,6 +122,35 @@ shezan = Restaurant.new(name: "Shezan", address: "Neue Roßstraße 13, 10179 Ber
 shezan.remote_photo_url = urlr20
 shezan.save!
 
+urlr21 = "https://images.pexels.com/photos/590477/pexels-photo-590477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+dolcini = Restaurant.new(name: "Dolcini", address: "Jägerstraße 70, 10117 Berlin", cuisine_id: cuisine_italian.id)
+dolcini.remote_photo_url = urlr21
+dolcini.save!
+
+urlr22 = "https://gffoodservice.org/wp-content/uploads/2015/03/restaurant-e1456862749354.jpg"
+trattoria_toscana = Restaurant.new(name: "Toscana", address: "Sredzkistraße 49, 10435 Berlin", cuisine_id: cuisine_italian.id)
+trattoria_toscana.remote_photo_url = urlr22
+trattoria_toscana.save!
+
+urlr23 = "https://images6.alphacoders.com/412/412226.jpg"
+saporito = Restaurant.new(name: "Saporito", address: "Straßmannstraße 21, 10249 Berlin", cuisine_id: cuisine_italian.id)
+saporito.remote_photo_url = urlr23
+saporito.save!
+
+urlr24 = "https://images.pexels.com/photos/3498/italian-pizza-restaurant-italy.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+pomodorino = Restaurant.new(name: "Pomodorino", address: "Mühsamstraße 29, 10249 Berlin", cuisine_id: cuisine_italian.id)
+pomodorino.remote_photo_url = urlr24
+pomodorino.save!
+
+
+urlr25 = "https://images.pexels.com/photos/750071/pexels-photo-750071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+papaleo = Restaurant.new(name: "Papaleo", address: "Bänschstraße 67, 10247 Berlin", cuisine_id: cuisine_italian.id)
+papaleo.remote_photo_url = urlr25
+papaleo.save!
+
+
+
+
 
 
 
@@ -132,7 +161,7 @@ tom.save!
 
 
 url2 ="https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=867&q=80"
-marcus = User.new(email: "marcus@gmail.com", first_name: "Marcus", gender: "male", last_name: "Williams", date_of_birth: "1980-08-08", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+marcus = User.new(email: "marcus@gmail.com", first_name: "Marcus", gender: "male", last_name: "Williams", date_of_birth: "1988-08-08", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 marcus.remote_photo_url = url2
 marcus.save!
 
@@ -147,7 +176,7 @@ stephan.remote_photo_url = url4
 stephan.save!
 
 url5 ="https://images.unsplash.com/photo-1501325087108-ae3ee3fad52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-jan = User.new(email: "jan@gmail.com", first_name: "Jan", last_name: "Lehmann", gender: "male", date_of_birth: "1998-12-12", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+jan = User.new(email: "jan@gmail.com", first_name: "Jan", last_name: "Lehmann", gender: "male", date_of_birth: "1995-12-12", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 jan.remote_photo_url = url5
 jan.save!
 
@@ -157,22 +186,22 @@ jason.remote_photo_url = url6
 jason.save!
 
 url7 ="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-marc = User.new(email: "marc@gmail.com", first_name: "Marc", last_name: "Astley", gender: "male", date_of_birth: "1978-03-05", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+marc = User.new(email: "marc@gmail.com", first_name: "Marc", last_name: "Astley", gender: "male", date_of_birth: "1992-03-05", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 marc.remote_photo_url = url7
 marc.save!
 
 url8 ="https://images.unsplash.com/photo-1541919931-3baf88859dda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-oliver = User.new(email: "oliver@gmail.com", first_name: "Oliver", last_name: "Dalton", gender: "male", date_of_birth: "1968-04-12", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+oliver = User.new(email: "oliver@gmail.com", first_name: "Oliver", last_name: "Dalton", gender: "male", date_of_birth: "1986-04-12", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 oliver.remote_photo_url = url8
 oliver.save!
 
 url9 ="https://images.unsplash.com/photo-1539598492601-581aa9675a30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-harry = User.new(email: "harry@gmail.com", first_name: "Harry", last_name: "Kinsley", gender: "male", date_of_birth: "1983-12-01", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+harry = User.new(email: "harry@gmail.com", first_name: "Harry", last_name: "Kinsley", gender: "male", date_of_birth: "1989-12-01", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 harry.remote_photo_url = url9
 harry.save!
 
 url10 ="https://images.unsplash.com/photo-1551617405-f1fc4bcd9f25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=662&q=80"
-charlie = User.new(email: "charlie@gmail.com", first_name: "Charlie", last_name: "Mitchell", gender: "male", date_of_birth: "1998-12-31", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+charlie = User.new(email: "charlie@gmail.com", first_name: "Charlie", last_name: "Mitchell", gender: "male", date_of_birth: "1996-12-31", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 charlie.remote_photo_url = url10
 charlie.save!
 
@@ -187,7 +216,7 @@ stacey.remote_photo_url = url13
 stacey.save!
 
 url15 ="https://images.unsplash.com/photo-1504911539020-cfb0f7887a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1998-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1995-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 tiffany.remote_photo_url = url15
 tiffany.save!
 
@@ -202,7 +231,7 @@ sakura.remote_photo_url = url17
 sakura.save!
 
 url18 ="https://images.unsplash.com/photo-1501625277806-e25bd4596da3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-jenny = User.new(email: "jenny@gmail.com", first_name: "Jenny", last_name: "Lincoln", gender: "female", date_of_birth: "1973-05-28", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+jenny = User.new(email: "jenny@gmail.com", first_name: "Jenny", last_name: "Lincoln", gender: "female", date_of_birth: "1993-05-28", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 jenny.remote_photo_url = url18
 jenny.save!
 
@@ -211,8 +240,14 @@ lisa = User.new(email: "lisa@gmail.com", first_name: "Lisa", last_name: "Bonet",
 lisa.remote_photo_url = url19
 lisa.save!
 
-url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
-andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1965-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+url20 ="https://www.lidl-kochen.de/var/lidl-recipes/storage/images/7/9/4/8/2188497-1-ger-DE/One-Pot-Pasta-mit-zweierlei-Tomaten-und-Oliven.jpg"
+andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1991-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+andrea.remote_photo_url = url20
+andrea.save!
+
+
+url21 ="https://images.pexels.com/photos/713312/pexels-photo-713312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+andrea = User.new(email: "lin@gmail.com", first_name: "lin", last_name: "Nguyen", gender: "female", date_of_birth: "1992-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
 
