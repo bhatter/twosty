@@ -36,7 +36,7 @@ calibocca = Restaurant.new(name: "CaliBocca", address: "Schlüterstraße 30, 106
 calibocca.remote_photo_url = urlr3
 calibocca.save!
 
-urlr4 = "https://img.taste.com.au/TRoLTh6r/taste/2016/11/pork-and-beef-ragu-with-spaghetti-95474-1.jpeg"
+urlr4 = "https://cdn.playbuzz.com/cdn/48a5257f-0a6c-4721-b355-0f323e304283/25a12c17-49c7-4b1d-9199-7a2e7609e637.jpg"
 cuore_di_vetro = Restaurant.new(name: "Cuore Vetro", address: "Max-Beer-Straße 33, 10119 Berlin", cuisine_id: cuisine_italian.id)
 cuore_di_vetro.remote_photo_url = urlr4
 cuore_di_vetro.save!
@@ -82,17 +82,17 @@ fabourg = Restaurant.new(name: "Faubourg", address: "Augsburger Str. 41, 10789 B
 fabourg.remote_photo_url = urlr12
 fabourg.save!
 
-urlr13 = "https://www.paradisoinsurance.com/wp-content/uploads/2018/01/tableware-at-restaurant.jpg"
+urlr13 = "https://images.unsplash.com/photo-1482275548304-a58859dc31b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80"
 lumieres = Restaurant.new(name: "Lumières", address: "Potsdamer Straße 102, 10785 Berlin", cuisine_id: cuisine_french.id)
 lumieres.remote_photo_url = urlr13
 lumieres.save!
 
-urlr14 = "https://mein.hofer.at/medias/RZP-R-Schnitzel-mit-Pommes-frites-und-Thai-Curry-Gewuerzsalz-RZ023286-RecipeImage-647x465?context=bWFzdGVyfGltYWdlc3w3NDQxMjB8aW1hZ2UvcG5nfGltYWdlcy9oODkvaDE1Lzg5NTExNzIzMDA4MzAucG5nfDdkMjA2MjU3MGFkYjQzNzRiYzEwMDhhMWYzYzgwZjRmMmY4OWUxNmQ1OTdhYTM0OTc0ZDc0M2JhZjI2ZDMxYjc"
-schnitzelei = Restaurant.new(name: "Schnitzeli", address: "Chausseestraße 8, 10115 Berlin", cuisine_id: cuisine_german.id)
-schnitzelei.remote_photo_url = urlr14
-schnitzelei.save!
+urlr14 = "https://www.bofrost.de/medias/wiener-hof-schnitzel-vom-schwein-01448-1.jpg-W1440xH900R1.6?context=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDEyNzcyMzJ8aW1hZ2UvanBlZ3xwcm9kdWN0LWltYWdlcy9oYzYvaDg4Lzg4MTYwNTA1NjkyNDYuanBnfDFlNWZhMDJlMzMzNWQzMzM2Y2NjMDhmMDBmNzc2ZDdhODc1MmJmYzdkMDE3YjM2Y2U2MWE0NWNjMWMwNjRiNTY"
+schnitzelei_mitte = Restaurant.new(name: "Schnitzeli", address: "Chausseestraße 8, 10115 Berlin", cuisine_id: cuisine_german.id)
+schnitzelei_mitte.remote_photo_url = urlr14
+schnitzelei_mitte.save!
 
-urlr15 = "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+urlr15 = "https://images.eatsmarter.de/sites/default/files/styles/max_size/public/gegrilltes-steak-mit-gruenem-pfeffer-103735.jpg"
 gendarmarie = Restaurant.new(name: "Gendamarie", address: "Behrenstraße 42, 10117 Berlin", cuisine_id: cuisine_german.id)
 gendarmarie.remote_photo_url = urlr15
 gendarmarie.save!
@@ -102,7 +102,7 @@ lemke = Restaurant.new(name: "Lemke", address: "Luisenplatz 1, 10585 Berlin", cu
 lemke.remote_photo_url = urlr16
 lemke.save!
 
-urlr17 = "https://img.taste.com.au/w_-0kcUJ/taste/2016/11/aussie-style-beef-and-salad-tacos-86525-1.jpeg"
+urlr17 = "https://images.unsplash.com/photo-1551276929-3f75211e0986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=904&q=80"
 cancun = Restaurant.new(name: "Cancun", address: "Rathausstraße 5-13, 10178 Berlin", cuisine_id: cuisine_mexican.id)
 cancun.remote_photo_url = urlr17
 cancun.save!
@@ -112,10 +112,10 @@ que_pasa = Restaurant.new(name: "Que Pasa", address: "Voxstraße 2, 10785 Berlin
 que_pasa.remote_photo_url = urlr18
 que_pasa.save!
 
-urlr19 = "https://eu2prddennyscdnstr.blob.core.windows.net/cms/menu/product/zesty-nachos_thumbnaillarge_2017-05-29-13-36-51.jpg"
-que_pasa = Restaurant.new(name: "Lupita", address: "Bergmannstraße 11, 10961 Berlin", cuisine_id: cuisine_mexican.id)
-que_pasa.remote_photo_url = urlr19
-que_pasa.save!
+urlr19 = "https://images.unsplash.com/photo-1542904990-6ada3c5b39c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+lupita = Restaurant.new(name: "Lupita", address: "Bergmannstraße 11, 10961 Berlin", cuisine_id: cuisine_mexican.id)
+lupita.remote_photo_url = urlr19
+lupita.save!
 
 urlr20 = "http://ricetteindiane.it/image/data/12.jpg"
 shezan = Restaurant.new(name: "Shezan", address: "Neue Roßstraße 13, 10179 Berlin", cuisine_id: cuisine_indian.id)
