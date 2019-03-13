@@ -1,4 +1,5 @@
-<div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1519307212971-dd9561667ffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+
+<div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1497760953885-d269502b5740?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);">
   <div class="parallax">
     <div class="section" id="carouseller">
       <div class="container">
@@ -9,23 +10,23 @@
           <div id="MagicCarousel" class="carousel slide" data-ride="true" data-interval="false">
             <div class="carousel-inner">
               <% @matching_requests.each_with_index do |matched_request, index| %>
-              <div class="carousel-item <%= "active" if index == 0 %>" >
-                <div class="link">
-                  <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
-                  <div class="match-index-card-picture" style="background-image: url('<%= cl_image_path matched_request.user.photo.url %>')">
+                  <div class="carousel-item <%= "active" if index == 0 %>" >
+                    <div class="link">
+                      <%= link_to meetings_path(request_id: @request.id, matched_request_id: matched_request.id), method: :post do  %>
+                      <div class="match-index-card-picture" style="background-image: url('<%= cl_image_path matched_request.user.photo.url %>')">
+                      </div>
+                      <div class="match-index-card-text-name">
+                        <%= matched_request.user.first_name %>,
+                        <%= matched_request.user.age %>
+                      </div>
+                      <div class="match-index-card-text-restaurant">
+                        <h1><%= matched_request.restaurant&.name %></h1>
+                        <br>
+                        <p> <%= matched_request.restaurant&.address %></p>
+                      </div>
+                      <% end %>
+                    </div>
                   </div>
-                  <div class="match-index-card-text-name">
-                    <%= matched_request.user.first_name %>,
-                    <%= matched_request.user.age %>
-                  </div>
-                  <div class="match-index-card-text-restaurant">
-                    <h1><%= matched_request.restaurant&.name %></h1>
-                    <br>
-                    <p> <%= matched_request.restaurant&.address %></p>
-                  </div>
-                  <% end %>
-                </div>
-              </div>
               <% end %>
               <a class="carousel-control-prev" href="#MagicCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -53,8 +54,7 @@
                 <div class="carousel-item <%= "active" if index == 0 %>" >
                   <div class="link">
                     <%= link_to request_path(id: @request.id, restaurant_id: restaurant.id), method: :put do  %>
-                    <div class="match-index-card-picture">
-                      <%= cl_image_tag restaurant.photo.url, class: "cl-photo" %>
+                    <div class="match-index-card-picture" style="background-image: url('<%= cl_image_path restaurant.photo.url %>')">
                     </div>
                     <div class="match-index-card-text-restaurant">
                       <h1><%= restaurant.name %></h1>
