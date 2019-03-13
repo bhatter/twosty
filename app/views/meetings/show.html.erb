@@ -1,52 +1,11 @@
-<!-- #{@meeting.other_user_request(current_user).user.first_name}
-<%= current_user.first_name %>
--->
 <div id ="image-meeting" style="background-image: url('<%= cl_image_path @meeting.other_user_request(current_user).user.photo.url %>')">
+    <p class="time"><strong><span class="name text d-inline"> <%= @meeting.other_user_request(current_user).user.first_name %></span></strong>
 </div>
-<div class ="meeting-details">
-  <p class="meet">Meet <strong><span class="colorful-name"> <%= @meeting.other_user_request(current_user).user.first_name %></span></strong> on <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
-  <p class="place">at <%= @restaurant.name %>,</p>
-  <p class="where"> <%= @restaurant.address%></p>
-</div>
-<div class="tab-1">
-  <div class="message-button">
-    <button class="tablinks active " onclick="openPage(event, 'container-chat')" id="defaultOpen">Message</button>
-  </div>
-  <div class="map-button">
-    <button class="tablinks" onclick="openPage(event, 'map')" >Map</button>
-  </div>
-</div>
-<div id="map" class="tabcontent"
-    style="
-    height: 273px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-<div id="container-chat" class="tabcontent" style="display: block;">
-  <div class="background-chat">
-    <div id="messages">
-      <% @meeting.messages.each do |message| %>
-      <div class="chat <%= message.user == current_user ? "user_one" : "user_two" %>">
-        <div class="chat-content">
-           <%= message.content %>
-        </div>
 
-      </div>
-      <% end %>
-    </div>
-  </div>
+<div >
+  <%= render "show_tab" %>
 </div>
-<h3 class="typing"> <%=  %></h3>
-  <%= simple_form_for [@meeting, @message], remote: true do |f| %>
-<div class="chat-enter">
-  <div class="input-chat">
-    <%= f.input :content, placeholder: "Type your message", class: "form-control say", label: false %>
-  </div>
-  <div >
-    <%= f.submit class: "btn btn-primary aaa", value: "Send"%>
-    <% end %>
-  </div>
-</div>
+
 
 
 
