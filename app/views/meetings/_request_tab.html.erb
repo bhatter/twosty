@@ -1,10 +1,11 @@
 <% if request.restaurant %>
-  <div class="entry-container">
-    <div class="entry">
-      <%= cl_image_tag request&.restaurant&.photo&.url, :width=>115, :fetch_format=>:auto, :crop=>"scale"%>
-      <div class="text d-inline">
-        <div>
-          <span class="time"><%= request.meeting_date.strftime("%A, %b %d") %> at
+<div class="entry-container">
+  <div class="entry">
+    <div class="restaurant-image-request" style="background-image: url('<%= cl_image_path request&.restaurant&.photo&.url %>')">
+    </div>
+    <div class="text d-inline">
+      <div>
+        <span class="time"><%= request.meeting_date.strftime("%A, %b %d") %> at
           <span class="title"> </span> <%= request&.restaurant&.name %> </span>
           <span class="address"> <%= request&.restaurant&.address %></span>
         </div>
@@ -12,4 +13,4 @@
       </div>
     </div>
   </div>
-<% end %>
+  <% end %>
