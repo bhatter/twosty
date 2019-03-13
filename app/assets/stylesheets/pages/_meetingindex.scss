@@ -96,7 +96,7 @@ a1 {
 }
 
 .color-layer {
-  background-color: rgba(237, 74, 75, 0.5);
+  background-color: rgba(107, 23, 102, 0.3);
   height: 100%;
   width: 100%;
   padding: 20px 20px 0 20px;
@@ -145,6 +145,12 @@ a1 {
   border: white 1px solid;
 }
 
+.restaurant-image-request {
+  background-size: cover;
+  background-position: center;
+  width: 115px;
+  height: 150px;
+}
 
 .entry{
   padding: 20px;
@@ -162,7 +168,8 @@ a1 {
 
 .text{
   display: inline-block;
-
+  margin: 5px 0px 15px 20px;
+  flex: 0 0 60%;
 }
 
 .title{

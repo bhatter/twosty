@@ -1,6 +1,11 @@
 <!-- Avatar with dropdown menu -->
+    <% if current_page?(meetings_path || meeting_path) %>
+    <div class="navbar-on-the-top">
+      <%= image_tag "logo_twosty.svg", height: 50, class: "dropdown-toggle", id: "navbar-menu", "data-toggle" => "dropdown" %>
+    <% else %>
     <div class="navbar">
       <%= image_tag "logo_twosty.svg", height: 50, class: "dropdown-toggle", id: "navbar-menu", "data-toggle" => "dropdown" %>
+      <% end %>
       <div id="sidebar">
           <% if user_signed_in? %>
               <ul style="list-style: none; padding: 0", class="text-menu">
