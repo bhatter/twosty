@@ -125,10 +125,10 @@ shezan.save!
 
 
 
-url1 ="https://images.unsplash.com/photo-1544098485-2a2ed6da40ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-johny = User.new(email: "johny@gmail.com", first_name: "Johny", gender: "male", last_name: "Doe", date_of_birth: "1980-08-08", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-johny.remote_photo_url = url1
-johny.save!
+url1 ="https://images.unsplash.com/photo-1550358383-5d09ab478bde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+tom = User.new(email: "tom@gmail.com", first_name: "Tom", gender: "male", last_name: "Taylor", date_of_birth: "1990-08-08", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+tom.remote_photo_url = url1
+tom.save!
 
 
 url2 ="https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=867&q=80"
@@ -176,32 +176,27 @@ charlie = User.new(email: "charlie@gmail.com", first_name: "Charlie", last_name:
 charlie.remote_photo_url = url10
 charlie.save!
 
-url11 ="https://images.unsplash.com/photo-1542488458-658077c76191?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+url11 ="https://images.unsplash.com/photo-1523545803985-5359300393e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
 sandra = User.new(email: "sandra@gmail.com", first_name: "Sandra", gender: "female", last_name: "Dudley", date_of_birth: "1988-08-09", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 sandra.remote_photo_url = url11
 sandra.save!
 
-url13 ="https://images.unsplash.com/photo-1546539782-6fc531453083?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+url13 ="https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
 stacey = User.new(email: "stacey@gmail.com", first_name: "Stacey", last_name: "Adams", gender: "female", date_of_birth: "1985-06-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 stacey.remote_photo_url = url13
 stacey.save!
 
-url14 ="https://images.unsplash.com/photo-1551711590-3adab09ddb89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-mona = User.new(email: "mona@gmail.com", first_name: "Mona", last_name: "Meyer", gender: "female", date_of_birth: "1996-12-22", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-mona.remote_photo_url = url14
-mona.save!
-
-url15 ="https://images.unsplash.com/photo-1548534535-e73f994ce895?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+url15 ="https://images.unsplash.com/photo-1504911539020-cfb0f7887a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
 tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1998-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 tiffany.remote_photo_url = url15
 tiffany.save!
 
-url16 ="https://images.unsplash.com/photo-1549351512-c5e12b11e283?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+url16 ="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
 nina = User.new(email: "nina@gmail.com", first_name: "Nina", last_name: "Miller", gender: "female", date_of_birth: "1984-04-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 nina.remote_photo_url = url16
 nina.save!
 
-url17 ="https://images.unsplash.com/photo-1542148240-878bb3c8b325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+url17 ="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
 sakura = User.new(email: "sakura@gmail.com", first_name: "Sakura", last_name: "Shimizu", gender: "female", date_of_birth: "1987-03-05", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 sakura.remote_photo_url = url17
 sakura.save!
@@ -216,7 +211,7 @@ lisa = User.new(email: "lisa@gmail.com", first_name: "Lisa", last_name: "Bonet",
 lisa.remote_photo_url = url19
 lisa.save!
 
-url20 ="https://images.unsplash.com/photo-1513732822839-24f03a92f633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
 andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1965-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
