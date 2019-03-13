@@ -1,4 +1,5 @@
 
+
 // .meet-image {
 //   height: auto;
 //   max-height: 100%;
@@ -26,20 +27,6 @@
   color: pink;
 }
 
-.congratulations h1{
-  font-size: 56px;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-  text-shadow: 2px 2px grey;
-  text-align: center;
-}
-
-.congratulations p {
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px grey;
-}
-
 .meeting-details {
   margin: -3px 0px;
   background-color: white;
@@ -47,14 +34,11 @@
   text-align: left;
 }
 
-
-
 .meet  {
   font-size: 23px;
   font-family: 'Sniglet', cursive;
   text-align: center;
   padding-top: 20px;
-
 }
 
 .place {
@@ -76,17 +60,9 @@
 }
 
 
-
-
-
-
-
-
-.upper-part {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+.colorful-name {
+  color: #FF5A83;
+  font-family: 'Sniglet', cursive;
 }
 
 
@@ -101,20 +77,6 @@
   top: 5px;
 
 }
-
-
-
-
-
-
-
-.row-1 {
-  padding: 5px;
-
-
-}
-
-
 
 
 #messages {
@@ -133,16 +95,11 @@ margin: 5px;
 }
 
 
-
-
-
-
 .tab-1 {
   overflow: hidden;
   background-color: #f1f1f1;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab-1 button {
   background-color: #52C0EC;
   float: left;
@@ -159,11 +116,25 @@ margin: 5px;
   color: white;
 }
 
+.tab-1 button:hover {
+  background-color: #2e94bd;
+}
+
+.tab-1 button.active {
+  background-color: #0b7ca9;
+}
+
+
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+
+
 .message-button {
   margin-left: 0px;
   padding-right: 15px;
 }
-
 
 .map-button button {
   margin-left: 10px;
@@ -172,10 +143,6 @@ margin: 5px;
   margin-right: 0px;
 }
 
-/* Change background color of buttons on hover */
-.tab-1 button:hover {
-  background-color: #2e94bd;
-}
 
 .user_one {
   width: 100vw;
@@ -219,35 +186,10 @@ margin: 5px;
   display: flex;
   justify-content: space-around;
 }
-/* Create an active/current tablink class */
 
-.aaa {
-
-}
-
-
-
-.tab-1 button.active {
-  background-color: #0b7ca9;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-
-
-  border-top: none;
-}
-
-.colorful-name {
-color: #FF5A83;
-font-family: 'Sniglet', cursive;
-}
 
 .say {
   height: 50px;
 }
 
-.image-card-meeting {
-background: white;
-}
+

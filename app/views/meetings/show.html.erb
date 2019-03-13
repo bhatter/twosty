@@ -4,7 +4,7 @@
 <div id ="image-meeting" style="background-image: url('<%= cl_image_path @meeting.other_user_request(current_user).user.photo.url %>')">
 </div>
 <div class ="meeting-details">
-  <p class="meet">Meet <strong><span class="colorful-name"> <%= @meeting.other_user_request(current_user).user.first_name %></span></span></strong> on <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
+  <p class="meet">Meet <strong><span class="colorful-name"> <%= @meeting.other_user_request(current_user).user.first_name %></span></strong> on <%= @meeting.other_user_request(current_user).meeting_date.strftime("%A, %b %d") %> </p>
   <p class="place">at <%= @restaurant.name %>,</p>
   <p class="where"> <%= @restaurant.address%></p>
 </div>
@@ -35,17 +35,18 @@
       <% end %>
     </div>
   </div>
-  <h3 class="typing"> <%=  %></h3>
-    <%= simple_form_for [@meeting, @message], remote: true do |f| %>
-  <div class="chat-enter">
-    <div class="input-chat">
-      <%= f.input :content, placeholder: "Say something", class: "form-control say", label: false %>
-    </div>
-    <div >
-      <%= f.submit class: "btn btn-primary aaa", value: "Send"%>
-      <% end %>
-    </div>
+</div>
+<h3 class="typing"> <%=  %></h3>
+  <%= simple_form_for [@meeting, @message], remote: true do |f| %>
+<div class="chat-enter">
+  <div class="input-chat">
+    <%= f.input :content, placeholder: "Say something", class: "form-control say", label: false %>
   </div>
+  <div >
+    <%= f.submit class: "btn btn-primary aaa", value: "Send"%>
+    <% end %>
+  </div>
+</div>
 
 
 
