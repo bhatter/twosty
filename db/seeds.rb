@@ -248,12 +248,15 @@ lisa = User.new(email: "lisa@gmail.com", first_name: "Lisa", last_name: "Bonet",
 lisa.remote_photo_url = url19
 lisa.save!
 
-
-
 url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
 andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1994-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
+
+url21 ="https://res.cloudinary.com/bhatter/image/upload/v1552575713/vwqrzf2zxoeuqhxn2o5m.jpg"
+mahesh = User.new(email: "mahesh@gmail.com", first_name: "Mahesh", last_name: "Bhatter", gender: "male", date_of_birth: "1990-08-23", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+mahesh.remote_photo_url = url21
+mahesh.save!
 
 
 url21 ="https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -322,21 +325,21 @@ viola.save!
 
 
 
-req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req2 = Request.create(user_id: stacey.id, restaurant_id: vapiano.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req2 = Request.create(user_id: stacey.id, restaurant_id: vapiano.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req3 = Request.create(user_id: nina.id, restaurant_id: calibocca.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req3 = Request.create(user_id: nina.id, restaurant_id: calibocca.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req4 = Request.create(user_id: sakura.id, restaurant_id: cuore_di_vetro.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req4 = Request.create(user_id: sakura.id, restaurant_id: cuore_di_vetro.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req5 = Request.create(user_id: jenny.id, restaurant_id: dolcini.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req5 = Request.create(user_id: jenny.id, restaurant_id: dolcini.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req8 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req8 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
 
 

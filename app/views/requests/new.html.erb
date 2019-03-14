@@ -1,5 +1,5 @@
 <div class="full-screen" style="background-image: url(https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-  <div class="parallax">
+  <div class="parallax request-new">
     <%= simple_form_for(@request) do |f| %>
     <div class="section">
       <br>
@@ -14,6 +14,7 @@
       <%= image_tag "arrow_up.svg", class: "ct-btn-scroll scroll_up_btn" %>
       <h3 class="form-word"> Cuisine </h3>
       <div id="cuisine-list">
+
         <%= f.association :cuisine, as: :radio_buttons, label: "", required: false %>
       </div>
         <%= image_tag "arrow_down.svg", class: "ct-btn-scroll scroll_down_btn" %>
