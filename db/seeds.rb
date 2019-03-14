@@ -263,21 +263,21 @@ mahesh.save!
 
 
 
-req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req2 = Request.create(user_id: stacey.id, restaurant_id: vapiano.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req2 = Request.create(user_id: stacey.id, restaurant_id: vapiano.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req3 = Request.create(user_id: nina.id, restaurant_id: calibocca.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req3 = Request.create(user_id: nina.id, restaurant_id: calibocca.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req4 = Request.create(user_id: sakura.id, restaurant_id: cuore_di_vetro.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req4 = Request.create(user_id: sakura.id, restaurant_id: cuore_di_vetro.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req5 = Request.create(user_id: jenny.id, restaurant_id: dolcini.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req5 = Request.create(user_id: jenny.id, restaurant_id: dolcini.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req7 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+req7 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
 
 
