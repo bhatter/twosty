@@ -259,9 +259,9 @@ mahesh.remote_photo_url = url21
 mahesh.save!
 
 
-url21 ="https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+url34 ="https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 jessica = User.new(email: "jessica@gmail.com", first_name: "Jessica", last_name: "Miller", gender: "female", date_of_birth: "1991-09-19" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-jessica.remote_photo_url = url21
+jessica.remote_photo_url = url34
 jessica.save!
 
 url22 ="https://images.pexels.com/photos/905913/pexels-photo-905913.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
