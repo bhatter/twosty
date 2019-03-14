@@ -8,6 +8,7 @@
 User.destroy_all
 Cuisine.destroy_all
 Restaurant.destroy_all
+Request.destroy_all
 
 puts "succesfully destroyed records"
 
@@ -18,6 +19,10 @@ cuisine_japanese = Cuisine.create!(name: "japanese")
 cuisine_french = Cuisine.create!(name: "french")
 cuisine_german = Cuisine.create!(name: "german")
 cuisine_mexican = Cuisine.create!(name: "mexican")
+
+
+
+
 
 
 urlr1 = "https://images.unsplash.com/photo-1549400405-810ac18d73b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"
@@ -144,7 +149,7 @@ pomodorino.remote_photo_url = urlr24
 pomodorino.save!
 
 
-urlr25 = "https://images.pexels.com/photos/750071/pexels-photo-750071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+urlr25 = "https://images.pexels.com/photos/1487511/pexels-photo-1487511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 papaleo = Restaurant.new(name: "Papaleo", address: "Bänschstraße 67, 10247 Berlin", cuisine_id: cuisine_italian.id)
 papaleo.remote_photo_url = urlr25
 papaleo.save!
@@ -214,27 +219,27 @@ sandra.remote_photo_url = url11
 sandra.save!
 
 url13 ="https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-stacey = User.new(email: "stacey@gmail.com", first_name: "Stacey", last_name: "Adams", gender: "female", date_of_birth: "1985-06-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-stacey.remote_photo_url = url13
-stacey.save!
+sakura = User.new(email: "sakura@gmail.com", first_name: "Sakura", last_name: "Shimizu", gender: "female", date_of_birth: "1992-06-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+sakura.remote_photo_url = url13
+sakura.save!
 
 url15 ="https://images.unsplash.com/photo-1504911539020-cfb0f7887a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1998-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+tiffany = User.new(email: "tiffany@gmail.com", first_name: "Tiffany", last_name: "Johnson", gender: "female", date_of_birth: "1986-10-12", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 tiffany.remote_photo_url = url15
 tiffany.save!
 
 url16 ="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-nina = User.new(email: "nina@gmail.com", first_name: "Nina", last_name: "Miller", gender: "female", date_of_birth: "1984-04-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+nina = User.new(email: "nina@gmail.com", first_name: "Nina", last_name: "Miller", gender: "female", date_of_birth: "1993-04-08", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 nina.remote_photo_url = url16
 nina.save!
 
 url17 ="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-sakura = User.new(email: "sakura@gmail.com", first_name: "Sakura", last_name: "Shimizu", gender: "female", date_of_birth: "1987-03-05", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
-sakura.remote_photo_url = url17
-sakura.save!
+stacey = User.new(email: "stacey@gmail.com", first_name: "Stacey", last_name: "Adams", gender: "female", date_of_birth: "1992-03-05", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+stacey.remote_photo_url = url17
+stacey.save!
 
 url18 ="https://images.unsplash.com/photo-1501625277806-e25bd4596da3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-jenny = User.new(email: "jenny@gmail.com", first_name: "Jenny", last_name: "Lincoln", gender: "female", date_of_birth: "1993-05-28", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+jenny = User.new(email: "jenny@gmail.com", first_name: "Jenny", last_name: "Lincoln", gender: "female", date_of_birth: "1988-05-28", gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 jenny.remote_photo_url = url18
 jenny.save!
 
@@ -245,13 +250,33 @@ lisa.save!
 
 
 
-
-
-
 url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
-andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1965-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1994-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
 
 
+
+req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req2 = Request.create(user_id: stacey.id, restaurant_id: vapiano.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req3 = Request.create(user_id: nina.id, restaurant_id: calibocca.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req4 = Request.create(user_id: sakura.id, restaurant_id: cuore_di_vetro.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req5 = Request.create(user_id: jenny.id, restaurant_id: dolcini.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+req7 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
+
+
+
+
+
+
 puts "succesfully created #{User.count}"
+puts "succesfully created #{Request.count}"
