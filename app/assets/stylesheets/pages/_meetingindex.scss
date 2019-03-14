@@ -161,13 +161,11 @@ a1 {
   border-top: 1px solid $light-grey;
   display: flex;
   align-items: center;
-
   img{
     display: inline-block;
     margin-right: 10px;
     height: 100%;
   }
-
 }
 
 .text{
@@ -201,6 +199,7 @@ a1 {
   font-size: 24px;
   display: block;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .address{
