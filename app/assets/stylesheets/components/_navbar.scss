@@ -57,7 +57,7 @@ a {
   background-image: linear-gradient(400deg,teal 12%, #32B796 60%);
   li {
     &:hover {
-      color: red;
+
     }
 
   }
@@ -67,7 +67,7 @@ a {
     line-height: 4px;
       &:hover {
         text-decoration: none;
-        color: #ED4A4B;
+        // color: #ED4A4B;
     }
   }
 }
@@ -107,9 +107,11 @@ a {
     color: white;
     opacity: 1;
     font-weight: bold;
-
   }
+}
 
+.form-control:focus {
+  box-shadow: none;
 }
 
 .font-city{
