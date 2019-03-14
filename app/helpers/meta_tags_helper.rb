@@ -14,7 +14,5 @@ module MetaTagsHelper
     # little twist to make it work equally with an asset or a url
     meta_image.starts_with?("http") ? meta_image : image_url(meta_image)
   end
-  def og_image
-        og_image = (content_for?(:og_image) ? content_for(:og_image) : DEFAULT_META["og_image"])
-  end
+
 end
