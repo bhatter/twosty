@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:username, :first_name, :last_name, :date_of_birth, :gender, :gender_preference, :age_preference_from, :age_preference_to, :photo])
   end
+
+  # app/controllers/application_controller.rb
+
+  def default_url_options
+    { host: ENV["HOST"] || "www.twosty.com" }
+  end
 end
