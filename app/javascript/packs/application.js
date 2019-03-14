@@ -6,8 +6,9 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import { sidebarToggle } from '../components/navbar';
 import { openPage} from '../components/tabs';
 import { scroll } from '../components/scroll';
-
+import scrollMessage from '../plugins/scrollMessage';
 initMapbox();
 initAutocomplete();
 sidebarToggle();
 scroll();
+scrollMessage();

@@ -14,6 +14,9 @@
 //   background-position: center;
 // }
 
+#show-page-full{
+  text-align: -webkit-auto;
+}
 #image-meeting {
   height: 494px;
   width: 376px;
@@ -81,18 +84,11 @@
 
 
 #messages {
-  // margin-top: 0px;
-  // height: 300px;
   overflow: auto;
   background: #e0e0e0;
-  // margin-left: -13px;
-  // margin-bottom: 10px;
   margin-right: 0px;
-  min-height: 180px;
-  max-height: 180px;
-  // padding: 8px;
-  // padding-bottom: 100px;
-
+  min-height: 250px;
+  padding-bottom: 70px;
 }
 
 .chat user_one {
