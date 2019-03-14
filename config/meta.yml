@@ -1,6 +1,5 @@
 meta_product_name: "Twosty"
 meta_title: "Twosty - Where good food meets fun dates"
 meta_description: "Twosty is a dating app matching people simply over their meal preference"
-meta_image: "logo_twosty.png" # should exist in `app/assets/images/`
-og_image: "social.jpg"
+meta_image: "social.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
