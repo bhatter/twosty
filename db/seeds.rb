@@ -256,6 +256,12 @@ andrea.remote_photo_url = url20
 andrea.save!
 
 
+url21 ="https://res.cloudinary.com/bhatter/image/upload/v1552568787/Mahesh.jpg"
+mahesh = User.new(email: "mahesh@gmail.com", first_name: "Mahesh", last_name: "Bhatter", gender: "male", date_of_birth: "1990-08-23", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+mahesh.remote_photo_url = url21
+mahesh.save!
+
+
 
 req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Deutschland", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
