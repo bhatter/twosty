@@ -248,15 +248,12 @@ lisa = User.new(email: "lisa@gmail.com", first_name: "Lisa", last_name: "Bonet",
 lisa.remote_photo_url = url19
 lisa.save!
 
-
-
 url20 ="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=351&q=80"
 andrea = User.new(email: "andrea@gmail.com", first_name: "Andrea", last_name: "Stevenson", gender: "female", date_of_birth: "1994-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 andrea.remote_photo_url = url20
 andrea.save!
 
-
-url21 ="https://res.cloudinary.com/bhatter/image/upload/v1552568787/Mahesh.jpg"
+url21 ="https://res.cloudinary.com/bhatter/image/upload/v1552575713/vwqrzf2zxoeuqhxn2o5m.jpg"
 mahesh = User.new(email: "mahesh@gmail.com", first_name: "Mahesh", last_name: "Bhatter", gender: "male", date_of_birth: "1990-08-23", gender_preference: "woman", age_preference_from: 18  , age_preference_to: 90, password: 123456)
 mahesh.remote_photo_url = url21
 mahesh.save!
