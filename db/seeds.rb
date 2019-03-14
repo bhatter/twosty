@@ -259,6 +259,71 @@ mahesh.remote_photo_url = url21
 mahesh.save!
 
 
+url21 ="https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+jessica = User.new(email: "jessica@gmail.com", first_name: "Jessica", last_name: "Miller", gender: "female", date_of_birth: "1991-09-19" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+jessica.remote_photo_url = url21
+jessica.save!
+
+url22 ="https://images.pexels.com/photos/905913/pexels-photo-905913.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+susan = User.new(email: "susan@gmail.com", first_name: "Susan", last_name: "Smith", gender: "female", date_of_birth: "1988-08-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+susan.remote_photo_url = url22
+susan.save!
+
+url23 ="https://images.unsplash.com/photo-1440589473619-3cde28941638?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+emily = User.new(email: "emily@gmail.com", first_name: "Emily", last_name: "Richardson", gender: "female", date_of_birth: "1990-02-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+emily.remote_photo_url = url23
+emily.save!
+
+url24 ="https://images.unsplash.com/photo-1542176754-f05b7d29a409?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80"
+lin = User.new(email: "lin@gmail.com", first_name: "Lin", last_name: "Nguyen", gender: "female", date_of_birth: "1992-05-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+lin.remote_photo_url = url24
+lin.save!
+
+url25 ="https://images.unsplash.com/photo-1542996966-2e31c00bae31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+amy = User.new(email: "amy@gmail.com", first_name: "Amy", last_name: "Stone", gender: "female", date_of_birth: "1985-02-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+amy.remote_photo_url = url25
+amy.save!
+
+url26 ="https://images.unsplash.com/photo-1549383045-95339015bdd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=641&q=80"
+jasmin = User.new(email: "jasmin@gmail.com", first_name: "Jasmin", last_name: "Dalton", gender: "female", date_of_birth: "1991-02-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+jasmin.remote_photo_url = url26
+jasmin.save!
+
+url27 ="https://images.unsplash.com/photo-1505075135786-46bf381343c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+zola = User.new(email: "zola@gmail.com", first_name: "Zola", last_name: "Williams", gender: "female", date_of_birth: "1984-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+zola.remote_photo_url = url27
+zola.save!
+
+
+url29 ="https://images.unsplash.com/photo-1476493279419-b785d41e38d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+nadja = User.new(email: "nadja@gmail.com", first_name: "Nadja", last_name: "Williams", gender: "female", date_of_birth: "1990-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+nadja.remote_photo_url = url29
+nadja.save!
+
+url30 ="https://images.unsplash.com/photo-1506707710000-189cf4c7f908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+domenika = User.new(email: "domenika@gmail.com", first_name: "Domenika", last_name: "Williams", gender: "female", date_of_birth: "1994-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+domenika.remote_photo_url = url30
+domenika.save!
+
+url31 ="https://images.unsplash.com/photo-1541943181603-d8fe267a5dcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=312&q=80"
+tamara = User.new(email: "tamara@gmail.com", first_name: "Tamara", last_name: "Williams", gender: "female", date_of_birth: "1989-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+tamara.remote_photo_url = url31
+tamara.save!
+
+url32 ="https://images.unsplash.com/photo-1545803928-04e3f4cdd4ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+claire = User.new(email: "claire@gmail.com", first_name: "Claire", last_name: "Williams", gender: "female", date_of_birth: "1987-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+claire.remote_photo_url = url32
+claire.save!
+
+url33 ="https://images.unsplash.com/photo-1545803928-04e3f4cdd4ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+viola = User.new(email: "viola@gmail.com", first_name: "Viola", last_name: "Williams", gender: "female", date_of_birth: "1988-04-25" , gender_preference: "man", age_preference_from: 18  , age_preference_to: 90, password: 123456)
+viola.remote_photo_url = url33
+viola.save!
+
+
+
+
+
 
 req1 = Request.create(user_id: sandra.id, restaurant_id: piccola.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
@@ -274,8 +339,7 @@ req6 = Request.create(user_id: lisa.id, restaurant_id: trattoria_toscana.id, loc
 
 req7 = Request.create(user_id: andrea.id, restaurant_id: saporito.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
-req7 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
-
+req8 = Request.create(user_id: tiffany.id, restaurant_id: pomodorino.id, location: "Berlin, Germany", cuisine_id: cuisine_italian.id, meeting_date: "2019-03-16")
 
 
 
